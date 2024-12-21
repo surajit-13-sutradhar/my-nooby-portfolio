@@ -1,18 +1,19 @@
 <div id="overlay" class="fixed-bottom-right"> 
 <!-- navbar -->
 </div>
-<section class="min-h-screen flex flex-col">
+
+<section class="min-h-screen flex flex-col relative">
     <div class="flex flex-col gap-0 items-center justify-center flex-grow">
         <h1 class="text-[2.578vw] text-white font-charm leading-[97%] select-none">
             Surajit <br/> Sutradhar
         </h1>
         <p class="text-[0.833vw] font-sen text-[#CABBFF] select-none ">DESIGNER <span class="font-charm lg:text-[0.9vw]">&</span> DEVELOPER</p>
-    </div>
-    <div class="mx-[32px] my-[32px]">
-        <p class="text-[32px] leading-[82%] tracking-tighter text-[#D9D9D9] font-sen custom-selection">
-            “Simplicity will stand out, while complexity <br class="custom-selection"/>will get lost in the crowd.”<br/>
-                                          ~Kevin Barnett
-        </p>
+        <div class="mx-[32px] my-[32px]  absolute left-0 bottom-0">
+            <p class="text-[32px] leading-[82%] tracking-tighter text-[#D9D9D9] font-sen custom-selection">
+                “Simplicity will stand out, while complexity <br class="custom-selection"/>will get lost in the crowd.”<br/>
+                                              ~Kevin Barnett
+            </p>
+        </div>
     </div>
 </section>
 
