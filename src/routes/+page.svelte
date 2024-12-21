@@ -1,5 +1,11 @@
-<div id="overlay" class="fixed-bottom-right"> 
-<!-- navbar -->
+<div id="date-time" class="fixed-bottom-right "> 
+<!-- Date and TIme -->
+</div>
+
+<div id="navbar" class="top-0 min-w-full p-[1.67vw] fixed z-50">
+    <div>
+        <img src="/assamIndia.svg" alt="Assam India" class="w-[5.365vw] h-[2.917vw] select-none" draggable="false">
+    </div>
 </div>
 
 <section class="min-h-screen flex flex-col relative">
@@ -9,9 +15,9 @@
         </h1>
         <p class="text-[0.833vw] font-sen text-[#CABBFF] select-none ">DESIGNER <span class="font-charm lg:text-[0.9vw]">&</span> DEVELOPER</p>
         <div class="mx-[32px] my-[32px]  absolute left-0 bottom-0">
-            <p class="text-[32px] leading-[82%] tracking-tighter text-[#D9D9D9] font-sen custom-selection">
-                “Simplicity will stand out, while complexity <br class="custom-selection"/>will get lost in the crowd.”<br/>
-                                              ~Kevin Barnett
+            <p class="text-[1.67vw] leading-[82%] tracking-tighter text-[#D9D9D9] font-sen custom-selection">
+                “Simplicity will stand out, while complexity <br class="custom-selection"/>will get lost in the crowd.”<br class="custom-selection"/>
+                <span class="pl-[19.479vw] text-[#FFF] custom-selection">~Kevin Barnett</span>
             </p>
         </div>
     </div>
@@ -22,11 +28,11 @@
         <div class="w-[33.125vw] flex flex-col justify-end">
             <div class="pl-[32px] pb-[3.333vw]">
                 <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white custom-selection">"Passionate about creating visually captivating and user-centric designs, I am a designer who thrives on turning ideas into stunning digital experiences. ut the way people interact with the world."</p>
-                <h1 class="font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none">about</h1>
+                <h1 class="font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none" draggable="false">about</h1>
             </div>
         </div>
         <div class="w-[32.292vw] py-[3.33vw] flex flex-col justify-between">
-            <p class="font-medium text-[1.042vw] leading-[100%] text-white text-right custom-selection">
+            <p class="font-medium text-[1.042vw] leading-[100%] text-[#CABBFF] text-right custom-selection">
                 "Passionate about creating visually captivating and user-centric designs, I am a designer who thrives on turning ideas into stunning digital experiences. With a keen eye for detail and a love for innovation, I specialize in crafting designs that not only look beautiful but also deliver seamless functionality. Whether it’s UI/UX, graphic design, or creative branding, I aim to tell compelling stories through visuals that leave a lasting impression. Constantly exploring trends and pushing boundaries, I believe in the power of design to transform the way people interact with the world."
             </p>
             <div class="w-full h-[32.292vw] bg-gray-400">
@@ -41,7 +47,7 @@
         <!-- Section 1 -->
         <div class="h-[15.104vw] relative">
             <div class="w-[13.75vw] flex flex-col">
-                <div class="w-full h-[12vw] bg-green-600">
+                <div class="w-full h-[12vw] bg-green-600 cursor-pointer">
                     <!-- Insert image here -->
                 </div>
                 <span class="font-sen h-[1.67vw] text-[#D9D9D9] custom-selection">
@@ -53,7 +59,7 @@
         <!-- Section 2 -->
         <div class="h-[18.49vw] relative">
             <div class="w-[15.625vw] flex flex-col absolute right-0">
-                <div class="w-full h-[16vw] bg-blue-400">
+                <div class="w-full h-[16vw] bg-blue-400 cursor-pointer">
                     <!-- Insert image here -->
                 </div>
                 <span class="font-sen h-[1.67vw] text-[#D9D9D9] custom-selection">
@@ -65,7 +71,7 @@
         <!-- Section 3 -->
         <div class="h-[15.313vw] relative">
             <div class="w-[19.792vw] flex flex-col">
-                <div class="w-full h-[13.5vw] bg-yellow-300">
+                <div class="w-full h-[13.5vw] bg-yellow-300 cursor-pointer">
                     <!-- Insert image here -->
                 </div>
                 <span class="font-sen h-[1.67vw] text-[#D9D9D9] custom-selection">
@@ -77,7 +83,7 @@
         <!-- Section 4 -->
         <div class="h-[15.313vw] relative">
             <div class="w-[15.625vw] flex flex-col absolute right-0">
-                <div class="w-full h-[13.5vw] bg-red-700">
+                <div class="w-full h-[13.5vw] bg-red-700 cursor-pointer">
                     <!-- Insert image here -->
                 </div>
                 <span class="font-sen h-[1.67vw] text-[#D9D9D9] custom-selection">
@@ -90,12 +96,12 @@
     <!-- works -->
     <div id="works" class="w-[49.844vw] h-[16.39vw] mx-auto my-[3.33vw]">
         <div class="pt-[3.33vw] px-[3.33vw] border-b-[1.5px] border-[#FFFFFF]">
-            <h2 class="font-sen font-bold text-[1.667vw] text-[#D9D9D9] select-none">Stuff I made</h2>
+            <h2 class="font-sen font-bold text-[1.667vw] text-[#FFFFFF] select-none">Stuff I made</h2>
         </div>
         <div id="project-info" class="py-[1.667vw] px-[3.333vw] h-[6.39vw] border-b-[1.5px] border-[#FFFFFF] flex flex-row items-center justify-between">
-            <h3 class="font-sen font-regular text-[2.083vw] text-white select-none">This Portfolio</h3>
+            <h3 class="font-sen font-regular text-[2.083vw] text-[#D9D9D9] select-none hover:translate-x-4 transition-all duration-300">This Portfolio</h3>
             <div>
-                <img src="/linklogo.svg" alt="External Link Svg" class="w-[4.427vw] h-[3.056vw]  hover:shadow-[0_0_10px_#D9D9D9] rounded-full transition-shadow duration-600 ease-in-out cursor-pointer">
+                <img src="/linklogo.svg" alt="External Link Svg" class="w-[4.427vw] h-[3.056vw] hover:shadow-[0_0_10px_#D9D9D9] rounded-full transition-shadow duration-600 ease-in-out cursor-pointer">
             </div>
         </div>
     </div>
@@ -104,19 +110,16 @@
 <section id="contact" class="min-h-screen pr-[25.104vw] w-full flex flex-row justify-between relative">
     <div class="w-[33.125vw] flex flex-col justify-end">
         <div class="pl-[32px] pb-[3.333vw]">
-            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white custom-selection"><a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a></p>
-            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white custom-selection"><a href="https://www.behance.net/surajitsutradh2" target="_blank">Behance</a></p>
-            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white custom-selection"><a href="https://www.facebook.com/share/Rn8gVZ7AkDwHSH47/" target="_blank">Facebook</a></p>
-            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white custom-selection"><a href="https://pin.it/VaLaQDlT6" target="_blank">Pinterest</a></p>
-            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white custom-selection"><a href="https://x.com/_the_crowww?t=-PVfGMsz4Gq0Sxu6Y1b1mA&s=09" alt="Twitter Handle Link" target="_blank">X</a></p>
-            <h1 class="font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none">let's chat</h1>
+            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white custom-selection hover:translate-x-2 transition-all duration-300"><a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn Link" target="_blank">LinkedIn</a></p>
+            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white custom-selection hover:translate-x-2 transition-all duration-300"><a href="https://www.behance.net/surajitsutradh2" alt="Behance Link" target="_blank">Behance</a></p>
+            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white custom-selection hover:translate-x-2 transition-all duration-300"><a href="https://www.facebook.com/share/Rn8gVZ7AkDwHSH47/" alt="Facebook Link"  target="_blank">Facebook</a></p>
+            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white custom-selection hover:translate-x-2 transition-all duration-300"><a href="https://pin.it/VaLaQDlT6" alt="Pinterest Link" target="_blank">Pinterest</a></p>
+            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white custom-selection hover:translate-x-2 transition-all duration-300"><a href="https://x.com/_the_crowww?t=-PVfGMsz4Gq0Sxu6Y1b1mA&s=09" alt="Twitter Handle Link" target="_blank">X</a></p>
+            <h1 class="font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none" draggable="false">let's chat</h1>
         </div>
     </div>
 </section>
   
-
-
-
 
 
 
