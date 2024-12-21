@@ -4,7 +4,7 @@
 
 <div id="navbar" class="top-0 min-w-full p-[1.67vw] fixed z-50">
     <div>
-        <img src="/assamIndia.svg" alt="Assam India" class="w-[5.365vw] h-[2.917vw] select-none" draggable="false">
+        <img src="/assamIndia.svg" alt="Assam India" class="w-[5.365vw] h-[2.917vw] select-none" draggable="false" style="pointer-events: none; -webkit-user-drag: none;">
     </div>
 </div>
 
@@ -33,7 +33,7 @@
         </div>
         <div class="w-[32.292vw] py-[3.33vw] flex flex-col justify-between">
             <p class="font-medium text-[1.042vw] leading-[100%] text-[#CABBFF] text-right custom-selection">
-                "Passionate about creating visually captivating and user-centric designs, I am a designer who thrives on turning ideas into stunning digital experiences. With a keen eye for detail and a love for innovation, I specialize in crafting designs that not only look beautiful but also deliver seamless functionality. Whether it’s UI/UX, graphic design, or creative branding, I aim to tell compelling stories through visuals that leave a lasting impression. Constantly exploring trends and pushing boundaries, I believe in the power of design to transform the way people interact with the world."
+                "Passionate about creating visually captivating and user-centric designs, I am a designer who thrives on turning ideas into stunning digital experiences. With a keen eye for detail and a love for innovation, I specialize in crafting designs that not only look beautiful but also deliver seamless functionality. Whether it's UI/UX, graphic design, or creative branding, I aim to tell compelling stories through visuals that leave a lasting impression. Constantly exploring trends and pushing boundaries, I believe in the power of design to transform the way people interact with the world."
             </p>
             <div class="w-full h-[32.292vw] bg-gray-400">
                 
