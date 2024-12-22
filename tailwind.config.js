@@ -9,7 +9,10 @@ export default {
             },
             boxShadow: {
                 textGlow: '0px 0px 10px 5px rgba(202, 187, 255, 0.6)',
-            }
+            },
+            letterSpacing: {
+                custom58: '0.58em', //custom letter spacing
+            },
         },
     },
     plugins: [],
