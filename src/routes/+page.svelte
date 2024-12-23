@@ -33,36 +33,6 @@
     let name = $state('')
     let email = $state('')
     let message = $state('')
-
-    const handleSubmit = async (event) => {
-        event.preventDefault()
-
-        const formData = {
-            name,
-            email,
-            message,
-        }
-
-        const response = await fetch('/api/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
-
-        const result = await response.json()
-
-        if(response.ok) {
-            alert('Message sent successfully!')
-        }else{
-            alert('Failed to send the message. Please try again.')
-        }
-    }
-    
-
-
-
 </script>
 
 
@@ -127,7 +97,7 @@
     <div class="w-[49.844vw] mx-auto my-[3.33vw] gap-0">
         <!-- Section 1 -->
         <div class="h-[15.104vw] relative">
-            <div class="w-[13.75vw] flex flex-col">
+            <div id="card" class="w-[13.75vw] flex flex-col">
                 <div class="w-full h-[12vw] bg-green-600 cursor-pointer">
                     <!-- Insert image here -->
                 </div>
@@ -204,7 +174,8 @@
         </div>
     </div>
 
-    <div id="contact-form" class="w-[23.594vw] flex flex-col justify-center">
+    <form id="contact-form" class="w-[23.594vw] flex flex-col justify-center" action="https://api.webforms.com/submit" method="POST">
+        <input type="hidden" name="access_key">
         <div id="inputs" class="flex flex-col gap-[1.354vw] w-full">
             <div id="form-group">
                 <label for="name" class="font-sen text-[#FFFFFF]">Name</label>
@@ -242,10 +213,10 @@
             </div>
             
         </div>
-        <button class="px-[32px] py-[16px] inline-block mt-[2.292vw] bg-[#3872f0] text-[#FFFFFF] text-[1.25vw] font-sen font-medium self-start rounded-full border-[1px] border-transparent hover:bg-[#2a2a5f] hover:text-[#FFFFFF] hover:border-[#3872f0] transition duration-300 ease-in-out">
+        <button type="submit" class="px-[32px] py-[16px] inline-block mt-[2.292vw] bg-[#3872f0] text-[#FFFFFF] text-[1.25vw] font-sen font-medium self-start rounded-full border-[1px] border-transparent hover:bg-[#2a2a5f] hover:text-[#FFFFFF] hover:border-[#3872f0] transition duration-300 ease-in-out">
             Send
         </button>
-    </div>
+    </form>
 </section>
   
 
