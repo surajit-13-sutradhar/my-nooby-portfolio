@@ -23,11 +23,8 @@
     })
 
 
-    // Mouse Move functionality
-    let coords = $state({x: 50, y: 50})
-    let size = $state(10)
+  
 
-    
 
     // Form handling Functionality
     let name = $state('')
@@ -76,6 +73,7 @@
 
 <!-- --------------- ABOUT SECTION ---------------- -->
 <section id="about" class="min-h-screen flex flex-col">
+    <div class="h-[1px] bg-[#3872f0] mx-[15vw]"></div>
     <div class="pr-[25.104vw] w-full flex flex-row justify-between relative">
         <div class="w-[33.125vw] flex flex-col justify-end">
             <div class="pl-[32px] pb-[3.333vw]">
@@ -145,6 +143,7 @@
     </div>
 
     <!-- ---------- WORKS ---------- -->
+    <!-- <div class="h-[1px] bg-slate-50 mx-[15vw]"></div> -->
     <div id="works" class="w-[49.844vw] h-[16.39vw] mx-auto my-[3.33vw]">
         <div class="pt-[3.33vw] px-[3.33vw] border-b-[1.5px] border-[#FFFFFF]">
             <h2 class="font-sen font-medium text-[1.667vw] text-[#FFFFFF] select-none">Stuff I made</h2>
@@ -161,6 +160,7 @@
 </section>
 
 <!-- --------------- CONTACT SECTION ---------------- -->
+<div class="h-[1px] bg-[#3872f0] mx-[15vw]"></div>
 <section id="contact" class="min-h-screen pr-[25.104vw] w-full flex flex-row justify-between relative">
     <div class="w-[33.125vw] flex flex-col justify-end">
         <div class="ml-[32px] mb-[3.333vw]">
@@ -234,10 +234,6 @@
 }
 
 :global(html, body) {
-    
-}
-
-:global(html, body) {
     height: 100%;
     padding: 0;
     margin: 0;
@@ -268,12 +264,14 @@
     color: #73099D; /* Text color during selection */
 }
 
+/* For Date and Time */
 .fixed-bottom-right {
     position: fixed;
     bottom: 0px; /* Distance from the bottom */
     right: 0px;  /* Distance from the right */
     z-index: 200; 
 }
+
 
 /* Class for navlinks */
 /* .active-link {
