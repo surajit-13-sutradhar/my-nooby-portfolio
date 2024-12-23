@@ -4,6 +4,7 @@
     import {SvelteDate} from 'svelte/reactivity'
     import {onMount} from 'svelte'
     import {Spring} from 'svelte/motion'
+    import { invalidate } from '$app/navigation'
     // import Rect from './Rect.svelte'
 
     // Date Time Functionality
@@ -21,36 +22,6 @@
         }
     })
 
-    // NavLinks functionality
-
-    let sections = [] //array of section elements
-    let activeLink = $state('home') //default active link
-    // function to update the activelink based on the scroll position
-    function updateActiveLink(){
-        sections.forEach((section) => {
-            const rect = section.getBoundingClientRect()
-            if(rect.top <= 100 && rect.bottom >= 100){
-                activeLink = section.id //update active link
-            }
-        })
-    }
-    // smooth scrolling to a section when a link is clicked
-    function scrollToSection(id, event) {
-        event.preventDefault()
-        const target = document.getElementById(id)
-        if(target){
-            target.scrollIntoView({behaviour: "smooth"})
-        }
-    }
-    // Initialize sections on component mount
-    onMount(() => {
-        sections = Array.from(document.querySelectorAll("section"))
-        window.addEventListener("scroll", updateActiveLink)
-
-        return () => {
-            window.removeEventListener("scroll", updateActiveLink)
-        }
-    })
 
     // Mouse Move functionality
     let coords = $state({x: 50, y: 50})
@@ -63,6 +34,34 @@
     let email = $state('')
     let message = $state('')
 
+    const handleSubmit = async (event) => {
+        event.preventDefault()
+
+        const formData = {
+            name,
+            email,
+            message,
+        }
+
+        const response = await fetch('/api/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+
+        const result = await response.json()
+
+        if(response.ok) {
+            alert('Message sent successfully!')
+        }else{
+            alert('Failed to send the message. Please try again.')
+        }
+    }
+    
+
+
 
 </script>
 
@@ -73,23 +72,24 @@
 </div>
 
 <!-- ---------- NAVBAR ---------- -->
-<div id="navbar" class="top-0 min-w-full p-[1.67vw] fixed z-50 flex justify-between">
+<div id="navbar" class="top-0 left-1/2 transform -translate-x-1/2 min-w-[90lvw] px-[1.5vw] py-[0.835vw] mx-auto my-[0.835vw] fixed z-50 flex justify-between items-center backdrop-blur-2xl rounded-full border-[0.5px] border-[#c9c9c9]">
     <!-- Assam India SVG -->
     <div>
         <img src="/assamIndia.svg" alt="Assam India" class="w-[5.365vw] h-[2.917vw] select-none" draggable="false" style="pointer-events: none; -webkit-user-drag: none;">
     </div>
 
     <!-- Navlinks -->
-    <div id="navLinks" class="flex font-sen px-[1.67vw] ">
-        <a href="#home" class="hover-underline-animation center text-[#D9D9D9] m-[16px] hover:text-[#FFFFFF] custom-selection"
+    <div id="navLinks" class="flex font-sen font-regular">
+        <a href="#home" class="hover-underline-animation  font-thin center m-[16px] text-[#FFFFFF] custom-selection"
             >Home</a>
-        <a href="#about" class="hover-underline-animation center text-[#D9D9D9] m-[16px] hover:text-[#FFFFFF] custom-selection" >About</a>
-        <a href="#contact" class="btn-grad text-[#e9dfdf] p-[16px] hover:text-[#FFFFFF] bg-[#73099D] custom-selection">Contact</a>
+        <a href="#about" class="hover-underline-animation  font-regular center m-[16px] text-[#FFFFFF] custom-selection" >About</a>
+        <a href="#contact" class="font-regular px-[16px] py-[4px] bg-[#3872f0] text-[#FFFFFF] rounded-full custom-selection flex justify-center items-center border-[1px] border-transparent hover:bg-[#2a2a5f] hover:text-[#FFFFFF] hover:border-[#3872f0] transition duration-300 ease-in-out">Contact</a>
     </div>
 </div>
 
 <!-- --------------- HOME SECTION ----------------  -->
 <section id="home" class="min-h-screen flex flex-col relative">
+    
     <div class="flex flex-col gap-0 items-center justify-center flex-grow">
         <h1 class="text-[2.578vw] text-white font-charm leading-[97%] select-none">
             Surajit <br/> Sutradhar
@@ -177,13 +177,15 @@
     <!-- ---------- WORKS ---------- -->
     <div id="works" class="w-[49.844vw] h-[16.39vw] mx-auto my-[3.33vw]">
         <div class="pt-[3.33vw] px-[3.33vw] border-b-[1.5px] border-[#FFFFFF]">
-            <h2 class="font-sen font-bold text-[1.667vw] text-[#FFFFFF] select-none">Stuff I made</h2>
+            <h2 class="font-sen font-medium text-[1.667vw] text-[#FFFFFF] select-none">Stuff I made</h2>
         </div>
         <div id="project-info" class="py-[1.667vw] px-[3.333vw] h-[6.39vw] border-b-[1.5px] border-[#FFFFFF] flex flex-row items-center justify-between">
-            <h3 class="font-sen font-regular text-[2.083vw] text-[#D9D9D9] select-none hover:translate-x-4 transition-all duration-300">This Portfolio</h3>
             <div class="flex items-center gap-5">
-                <img src="/linklogo.svg" alt="External Link Svg" class="w-[4.427vw] h-[3.056vw] hover:shadow-[0_0_10px_#D9D9D9] rounded-full transition-shadow duration-600 ease-in-out cursor-pointer" />
+                <h3 class="font-sen font-bold text-[2.083vw] text-[#FFFFFF] select-none hover:translate-x-4 transition-all duration-300">This Portfolio</h3>
+                <img src="/linklogo.svg" alt="External Link Svg" class="w-[1.406vw] h-[1.406vw] cursor-pointer" /> 
             </div>
+            <a href="https://github.com/surajit-13-sutradhar/my-nooby-portfolio" target="_blank"><img src="/github.svg" alt="Github link" class="w-[3.5vw] h-[3.5vw] cursor-pointer"></a>
+            
         </div>
     </div>
 </section>
@@ -195,7 +197,7 @@
             <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white hover:translate-x-2 transition-all duration-300"><a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn Link" target="_blank" class="custom-selection inline-block">LinkedIn</a></p>
             <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white hover:translate-x-2 transition-all duration-300"><a href="https://www.behance.net/surajitsutradh2" alt="Behance Link" target="_blank" class="custom-selection inline-block">Behance</a></p>
             <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white hover:translate-x-2 transition-all duration-300 w-"><a href="https://x.com/_the_crowww?t=-PVfGMsz4Gq0Sxu6Y1b1mA&s=09" alt="Twitter Handle Link" target="_blank" class="custom-selection inline-block">X</a></p>
-            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white hover:translate-x-2 transition-all duration-300"><a href="https://www.facebook.com/share/Rn8gVZ7AkDwHSH47/" alt="Facebook Link"  target="_blank" class="custom-selection inline-block">Facebook</a></p>
+            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white hover:translate-x-2 transition-all duration-300"><a href="mailto:surajitsutradhardes@gmail.com" alt="Gmail Link"  target="_blank" class="custom-selection inline-block">Gmail</a></p>
             <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white hover:translate-x-2 transition-all duration-300"><a href="https://pin.it/VaLaQDlT6" alt="Pinterest Link" target="_blank" class="custom-selection inline-block">Pinterest</a></p>
             
             <h1 class="font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none" draggable="false">let's chat</h1>
@@ -229,17 +231,18 @@
             </div>
             
             <div id="form-group">
-                <label for="text" class="font-sen text-[#FFFFFF]">Details about your project</label>
+                <label for="text" class="font-sen text-[#FFFFFF]">Details about your project in brief</label>
                 <textarea id="message"
                 required  
                 type="text" 
-                placeholder="Write your message"  class="w-full h-[8.333vw] text-[#FFFFFF] leading-[100%] border-none outline-none bg-transparent p-0 focus:ring-0 resize-none placeholder:text-[#CABBFF] placeholder:text-sm placeholder:font-sen"
+                placeholder="Write your message"  class="w-full h-[8.333vw] text-[#FFFFFF] leading-[100%] border-none outline-none bg-transparent p-0 focus:ring-0 resize-none placeholder:text-[#CABBFF] placeholder:text-sm placeholder:font-sen overflow-hidden"
+                maxlength="200"
                 bind:value={message}
                 ></textarea>
             </div>
             
         </div>
-        <button class="btn-grad px-[32px] py-[16px] inline-block mt-[2.292vw] bg-[#73099D] text-[#FFFFFF] text-[1.25vw] font-sen font-medium self-start">
+        <button class="px-[32px] py-[16px] inline-block mt-[2.292vw] bg-[#3872f0] text-[#FFFFFF] text-[1.25vw] font-sen font-medium self-start rounded-full border-[1px] border-transparent hover:bg-[#2a2a5f] hover:text-[#FFFFFF] hover:border-[#3872f0] transition duration-300 ease-in-out">
             Send
         </button>
     </div>
@@ -255,6 +258,14 @@
     --clr-error: red;
 }
 
+:global(*) {
+    box-sizing: border-box;
+}
+
+:global(html, body) {
+    
+}
+
 :global(html, body) {
     height: 100%;
     padding: 0;
@@ -265,7 +276,7 @@
 
 :global(body) {
     background-color: #73099D;
-    background-image: url('/DesktopBackground.png');
+    background-image: url('/DesktopBackgroundalt.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -323,21 +334,6 @@ textarea:not(:placeholder-shown):invalid {
     border-color: var(--clr-error);
 }
 
-/* Button Animation*/
-/* gradient background and hover effect */
-.btn-grad {
-    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
-    transition: background-position 0.5s ease, color 0.5s ease;
-    background-size: 200% auto;
-    /* color: white; */
-    /* text-transform: uppercase; */
-}
-
-.btn-grad:hover {
-    background-position: right center;
-    /* color: #fff; */
-    text-decoration: none;
-}
 
 /* Hover underline animation */
 /* Base Hover Underline Animation */
@@ -354,7 +350,7 @@ textarea:not(:placeholder-shown):invalid {
     height: 1.5px;
     bottom: 0;
     left: 0;
-    background-color: #DA22FF;
+    background-color: #3872f0;
     transition: transform 0.25s ease-out;
 }
 
@@ -378,6 +374,28 @@ textarea:not(:placeholder-shown):invalid {
     transform: scaleX(1);
 }
 
+/* Custom Scrollbar */
+:global(::-webkit-scrollbar) {
+    width: 5px; /* Scrollbar width */
+}
+
+:global(::-webkit-scrollbar-track) {
+    background: #ffffff; /* Track color */
+    border-radius: 10px
+}
+
+:global(::-webkit-scrollbar-thumb) {
+    background: #3e7cda; /* Thumb color */
+    border-radius: 10px
+}
+
+:global(::-webkit-scrollbar-thumb:hover) {
+    background: #2527b9; /* Thumb hover color */
+    border-radius: 10px
+}
+
+
+/* Gradient border */
 @media (min-width: 768px) {
     :global(body) {
         background-attachment: fixed;
