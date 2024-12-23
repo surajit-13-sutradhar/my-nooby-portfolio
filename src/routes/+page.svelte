@@ -5,6 +5,7 @@
     import {onMount} from 'svelte'
     import {Spring} from 'svelte/motion'
     import { invalidate } from '$app/navigation'
+    import {fly, fade} from 'svelte/transition'
     // import Rect from './Rect.svelte'
 
     // Date Time Functionality
@@ -22,24 +23,107 @@
         }
     })
 
-
-  
+    // Flying Transition of Heading
+    let visible = true
 
 
     // Form handling Functionality
+    // FIREBASE_URL: https://my-portfolio-crow-default-rtdb.asia-southeast1.firebasedatabase.app/
     let name = $state('')
     let email = $state('')
     let message = $state('')
+
+    let showSuccess = $state(false)
+    let showWarning = $state(false)
+    let showError = $state(false)
+
+    const resetAlert = () => {
+        setTimeout(() => {
+            showSuccess = false;
+            showWarning = false;
+            showError = false
+        }, 5000) //hide the alert after 5 seconds
+    }
+
+    const handleSubmit = async(event) => {
+        event.preventDefault();
+
+        showSuccess = false;
+        showWarning = false;
+        showError = false;
+        
+
+        if (!name.trim() || !email.trim() || !message.trim()) {
+            // Show the warning alert here
+            showWarning = true
+            resetAlert()
+            return; // Stop execution if validation fails
+        }
+
+        // Sending Data to Firebase
+        const response = await fetch('https://my-portfolio-crow-default-rtdb.asia-southeast1.firebasedatabase.app/clientDataRecords.json',
+            {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name,  //using state variables
+                    email,
+                    message
+                }),
+            }
+        );
+
+        if (response){
+            console.log(response)
+            // Show the success alert here
+            showSuccess = true
+            resetAlert()
+            
+        } else {
+            // Show the error alert here
+            showError = true
+            resetAlert()
+        }
+
+        // Clearing form fields after submission
+        name = ''
+        email = ''
+        message = ''
+    }
+
+    // Navbar hide on scroll
+    let y = $state(0)
+
 </script>
+
+<svelte:window bind:scrollY="{y}" />
+
+<!-- ---------- Success Alert Card ----------- -->
+<div class="z-99999 left-1/2 fixed z-50 hidden">
+    <p class="font-sen text-[12px] px-[1.67vw] py-[3.33vw] text-[#FFFFFF] border-[1.5px] border-green-500 rounded-[16px] backdrop-blur-2xl mt-[0.5vw]">Your message was sent successfully!<br/> I'll reach out to you soon 😊  </p>
+</div>
+
+<!-- Warning alert card -->
+<div class="z-99999 left-1/2 fixed z-50 hidden">
+    <p class="font-sen text-[12px] px-[1.67vw] py-[3.33vw] text-[#FFFFFF] border-[1.5px] border-yellow-500 rounded-[16px] backdrop-blur-2xl mt-[0.5vw]">Please fill out all the fields before submitting 🥺</p>
+</div>
+
+<!-- Error alert card -->
+<div class="z-99999 left-1/2 fixed z-50 hidden">
+    <p class="font-sen text-[12px] px-[1.67vw] py-[3.33vw] text-[#FFFFFF] border-[1.5px] border-red-500 rounded-[16px] backdrop-blur-2xl mt-[0.5vw]">Oops! There was an error 😭 <br> Check connectivity or try again later... </p>
+</div>
+ 
 
 
 <!-- ---------- DATE AND TIME ---------- -->
-<div id="date-time" class="fixed-bottom-right m-[1.67vw] tracking-custom58 font-sen text-[16px] font-regular text-[#FFFFFF] pr-[1.67vw] custom-selection"> 
+<div id="date-time" class="fixed-bottom-right m-[1.67vw] tracking-custom58 font-sen text-[16px] font-regular text-[#FFFFFF] pr-[1.67vw] custom-selection "> 
     {date.getHours()}:{pad(date.getMinutes())}:{pad(date.getSeconds())}
 </div>
 
 <!-- ---------- NAVBAR ---------- -->
-<div id="navbar" class="top-0 left-1/2 transform -translate-x-1/2 min-w-[90lvw] px-[1.5vw] py-[0.835vw] mx-auto my-[0.835vw] fixed z-50 flex justify-between items-center backdrop-blur-2xl rounded-full border-[0.5px] border-[#c9c9c9]">
+<div id="navbar" class="top-0 left-1/2 transform -translate-x-1/2 min-w-[90lvw] px-[1.5vw] py-[0.835vw] mx-auto my-[0.835vw] fixed z-40 flex justify-between items-center backdrop-blur-2xl rounded-full border-[0.5px] border-[#c9c9c9]">
     <!-- Assam India SVG -->
     <div>
         <img src="/assamIndia.svg" alt="Assam India" class="w-[5.365vw] h-[2.917vw] select-none" draggable="false" style="pointer-events: none; -webkit-user-drag: none;">
@@ -58,10 +142,13 @@
 <section id="home" class="min-h-screen flex flex-col relative">
     
     <div class="flex flex-col gap-0 items-center justify-center flex-grow">
-        <h1 class="text-[2.578vw] text-white font-charm leading-[97%] select-none">
-            Surajit <br/> Sutradhar
-        </h1>
-        <p class="text-[0.833vw] font-sen text-[#CABBFF] select-none ">DESIGNER <span class="font-charm lg:text-[0.9vw]">&</span> DEVELOPER</p>
+        <div transition:fly={{y:50, duration: 2000, delay: 500, easing: t => t * t}}>
+            <h1 class="text-[2.578vw] text-white font-charm leading-[97%] select-none">
+                Surajit <br/> Sutradhar
+            </h1>
+            <p class="text-[0.833vw] font-sen text-[#CABBFF] select-none">DESIGNER <span class="font-charm lg:text-[0.9vw]">&</span> DEVELOPER</p>
+        </div>
+        
         <div class="mx-[32px] my-[32px]  absolute left-0 bottom-0">
             <p class="text-[1.67vw] leading-[82%] tracking-tighter text-[#D9D9D9] font-sen custom-selection">
                 “Simplicity will stand out, while complexity <br class="custom-selection"/>will get lost in the crowd.”<br class="custom-selection"/>
@@ -174,10 +261,9 @@
         </div>
     </div>
 
-    <form id="contact-form" class="w-[23.594vw] flex flex-col justify-center" action="https://api.webforms.com/submit" method="POST">
-        <input type="hidden" name="access_key">
+    <form id="contact-form" class="w-[23.594vw] flex flex-col justify-center">
         <div id="inputs" class="flex flex-col gap-[1.354vw] w-full">
-            <div id="form-group">
+            <div id="name">
                 <label for="name" class="font-sen text-[#FFFFFF]">Name</label>
                 <input 
                 required id="name" 
@@ -188,9 +274,9 @@
                 >
             </div>
             
-            <div id="form-group">
+            <div id="email">
                 <label for="Email" class="font-sen text-[#FFFFFF]">Email</label>
-                <input id="email" 
+                <input id="Email" 
                 required 
                 type="email" 
                 placeholder="E-mail" 
@@ -202,7 +288,7 @@
             </div>
             
             <div id="form-group">
-                <label for="text" class="font-sen text-[#FFFFFF]">Details about your project in brief</label>
+                <label for="Text message" class="font-sen text-[#FFFFFF]">Details about your project in brief</label>
                 <textarea id="message"
                 required  
                 type="text" 
@@ -213,7 +299,7 @@
             </div>
             
         </div>
-        <button type="submit" class="px-[32px] py-[16px] inline-block mt-[2.292vw] bg-[#3872f0] text-[#FFFFFF] text-[1.25vw] font-sen font-medium self-start rounded-full border-[1px] border-transparent hover:bg-[#2a2a5f] hover:text-[#FFFFFF] hover:border-[#3872f0] transition duration-300 ease-in-out">
+        <button type="submit" class="px-[32px] py-[16px] inline-block mt-[2.292vw] bg-[#3872f0] text-[#FFFFFF] text-[1.25vw] font-sen font-medium self-start rounded-full border-[1px] border-transparent hover:bg-[#2a2a5f] hover:text-[#FFFFFF] hover:border-[#3872f0] transition duration-300 ease-in-out onclick:bg-[#3872f0] onclick:border-[#3872f0]" onclick={handleSubmit}>
             Send
         </button>
     </form>
@@ -362,7 +448,6 @@ textarea:not(:placeholder-shown):invalid {
     background: #2527b9; /* Thumb hover color */
     border-radius: 10px
 }
-
 
 /* Gradient border */
 @media (min-width: 768px) {
