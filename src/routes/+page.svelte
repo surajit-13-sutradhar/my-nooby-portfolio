@@ -28,7 +28,6 @@
 
 
     // Form handling Functionality
-    // FIREBASE_URL: https://my-portfolio-crow-default-rtdb.asia-southeast1.firebasedatabase.app/
     let name = $state('')
     let email = $state('')
     let message = $state('')
@@ -62,7 +61,8 @@
         }
 
         // Sending Data to Firebase
-        const response = await fetch('https://my-portfolio-crow-default-rtdb.asia-southeast1.firebasedatabase.app/clientDataRecords.json',
+        const firebaseUrl = import.meta.env.VITE_FIREBASE_URL
+        const response = await fetch(firebaseUrl,
             {
                 method: 'POST',
                 headers: {
