@@ -2,7 +2,7 @@
 
 <script>
     import {SvelteDate} from 'svelte/reactivity'
-    import {onMount} from 'svelte'
+    import {onMount, onDestroy} from 'svelte'
     import {Spring} from 'svelte/motion'
     import { invalidate } from '$app/navigation'
     import {fly, fade} from 'svelte/transition'
@@ -100,16 +100,20 @@
     let isNavOpen = $state(false)
     let isToggling = $state(false)
 
+    
     // toggle function
     function toggleNav() {
         // prevent rapid toggling while the ani
-        if(isToggling) return
+        if(isToggling) return // Prevent rapid toggling
+        isToggling = true
         isNavOpen = !isNavOpen
+        setTimeout(() => (isToggling = false), 500) //Matches the animation duration
     }
 
-    
-    
-
+    // Function to close
+    function closeNav() {
+        isNavOpen = false
+    }
 </script>
 
 
@@ -154,10 +158,10 @@
 
 <!-- Navlinks or Primary navigation -->
 <header id="navLinks" class="primary-navigation flex font-sen font-regular fixed z-30 right-[1.67vw] top-1" class:open={isNavOpen}>
-    <a href="#home" class="hover-underline-animation  font-thin text-[14px] center m-[16px] text-[#FFFFFF] custom-selection"
+    <a href="#home" class="hover-underline-animation  font-thin text-[14px] center m-[16px] text-[#FFFFFF] custom-selection" onclick={closeNav}
         ><span aria-hidden="true">Home</span></a>
-    <a href="#about" class="hover-underline-animation  font-regular text-[14px] center m-[16px] text-[#FFFFFF] custom-selection" >About</a>
-    <a href="#contact" class="hover-underline-animation  font-bold text-[14px] center m-[16px] text-[#93e0ff] custom-selection" ><span aria-hidden="true">Contact</span></a>
+    <a href="#about" class="hover-underline-animation  font-regular text-[14px] center m-[16px] text-[#FFFFFF] custom-selection" onclick={closeNav}>About</a>
+    <a href="#contact" class="hover-underline-animation  font-bold text-[14px] center m-[16px] text-[#93e0ff] custom-selection" onclick={closeNav}><span aria-hidden="true">Contact</span></a>
 </header>
 
 <!-- --------------- HOME SECTION ----------------  -->
@@ -206,12 +210,19 @@
 
     <!-- About Continued -->
     <div class="w-[49.844vw] mx-auto my-[3.33vw] gap-0">
+
+
         <!-- Section 1 -->
         <div class="card h-[15.104vw] relative">
             <div id="card" class="w-[13.75vw] flex flex-col">
-                <div class="w-full h-[12vw] bg-green-600 cursor-pointer">
-                    <!-- Insert image here -->
-                </div>
+                <a href="https://github.com/surajit-13-sutradhar" aria-label="Github">
+                    <div class="w-full h-[12vw] cursor-pointer backdrop-blur-lg border-[1px] border-[#bbbbbb] flex justify-center rounded-md relative overflow-hidden group">
+                        <!-- Github Logo -->
+                        <img src="icon-github.svg" alt="Github Logo" class="w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0">
+                        <!-- Background image -->
+                        <img src="img-github.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-left transition-opacity duration-500 group-hover:opacity-100">
+                    </div>
+                </a>
                 <span class="hover-underline-animation left font-sen font-medium h-[1.67vw] text-[#D9D9D9] custom-selection">
                     My Github
                 </span>
@@ -221,11 +232,17 @@
         <!-- Section 2 -->
         <div class="card h-[18.49vw] relative">
             <div class="w-[15.625vw] flex flex-col absolute right-0">
-                <div class="w-full h-[16vw] bg-blue-400 cursor-pointer">
-                    <!-- Insert image here -->
-                </div>
-                <span class="hover-underline-animation left font-sen font-medium h-[1.67vw] text-[#D9D9D9] custom-selection">
-                    My Reads
+                <a href="https://frontendflow.hashnode.dev/" aria-label="Spotify" target="_blank">
+                    <div class="w-full h-[13.5vw] backdrop-blur-lg border-[1px] border-[#bbbbbb] flex justify-center rounded-md cursor-pointer relative overflow-hidden group">
+                        <!-- Spotify Icon -->
+                        <img src="icon-spotify.svg" alt="Github Logo" class="w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0">
+                        <!-- Background Image -->
+                        <img src="img-spotify.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-top transition-opacity duration-500 group-hover:opacity-100">
+    
+                    </div>
+                </a>
+                <span class="font-sen font-medium h-[1.67vw] text-[#D9D9D9] custom-selection cursor-default">
+                    My Spotify
                 </span>
             </div>
         </div>
@@ -233,26 +250,21 @@
         <!-- Section 3 -->
         <div class="card h-[15.313vw] relative">
             <div class="w-[19.792vw] flex flex-col">
-                <div class="w-full h-[13.5vw] bg-yellow-300 cursor-pointer">
-                    <!-- Insert image here -->
-                </div>
-                <span class="hover-underline-animation left font-sen font-medium h-[1.67vw] text-[#D9D9D9] custom-selection">
+                <a href="https://frontendflow.hashnode.dev/" aria-label="Hashnode">
+                    <div class="w-full h-[13.5vw] backdrop-blur-lg border-[1px] border-[#bbbbbb] flex justify-center rounded-md cursor-pointer relative overflow-hidden group">
+                        <!-- Hashnode Icon -->
+                        <img src="icon-hashnode.svg" alt="Hashnode Logo" class="w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0">
+                        <!-- Background image -->
+                        <img src="img-hashnode.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-top transition-opacity duration-500 group-hover:opacity-100">
+                    </div>
+                </a>
+                
+                <span class="font-sen font-medium h-[1.67vw] text-[#D9D9D9] custom-selection cursor-default">
                     My Blogs
                 </span>
             </div>
         </div>
 
-        <!-- Section 4 -->
-        <div class="card h-[15.313vw] relative">
-            <div class="w-[15.625vw] flex flex-col absolute right-0">
-                <div class="w-full h-[13.5vw] bg-red-700 cursor-pointer">
-                    <!-- Insert image here -->
-                </div>
-                <span class="hover-underline-animation left font-sen font-medium h-[1.67vw] text-[#D9D9D9] custom-selection inline-block">
-                    My Spotify
-                </span>
-            </div>
-        </div>
     </div>
 
     <!-- ---------- WORKS ---------- -->
@@ -277,11 +289,14 @@
 <section id="contact" class="min-h-screen pr-[25.104vw] w-full flex flex-row justify-between relative">
     <div class="w-[33.125vw] flex flex-col justify-end">
         <div class="ml-[32px] mb-[3.333vw]">
-            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white hover:translate-x-2 transition-all duration-300"><a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn Link" target="_blank" class="custom-selection inline-block">LinkedIn</a></p>
-            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white hover:translate-x-2 transition-all duration-300"><a href="https://www.behance.net/surajitsutradh2" alt="Behance Link" target="_blank" class="custom-selection inline-block">Behance</a></p>
-            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white hover:translate-x-2 transition-all duration-300 w-"><a href="https://x.com/_the_crowww?t=-PVfGMsz4Gq0Sxu6Y1b1mA&s=09" alt="Twitter Handle Link" target="_blank" class="custom-selection inline-block">X</a></p>
-            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white hover:translate-x-2 transition-all duration-300"><a href="mailto:surajitsutradhardes@gmail.com" alt="Gmail Link"  target="_blank" class="custom-selection inline-block">Gmail</a></p>
-            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white hover:translate-x-2 transition-all duration-300"><a href="https://pin.it/VaLaQDlT6" alt="Pinterest Link" target="_blank" class="custom-selection inline-block">Pinterest</a></p>
+            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white mb-[1vw]" >
+                You can also find me on
+            </p>
+            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff] hover:translate-x-2 transition-all duration-300"><a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn Link" target="_blank" class="custom-selection inline-block">LinkedIn</a></p>
+            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff] hover:translate-x-2 transition-all duration-300"><a href="https://www.behance.net/surajitsutradh2" alt="Behance Link" target="_blank" class="custom-selection inline-block">Behance</a></p>
+            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff] hover:translate-x-2 transition-all duration-300 w-"><a href="https://x.com/_the_crowww?t=-PVfGMsz4Gq0Sxu6Y1b1mA&s=09" alt="Twitter Handle Link" target="_blank" class="custom-selection inline-block">X</a></p>
+            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff] hover:translate-x-2 transition-all duration-300"><a href="mailto:surajitsutradhardes@gmail.com" alt="Gmail Link"  target="_blank" class="custom-selection inline-block">Gmail</a></p>
+            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff] hover:translate-x-2 transition-all duration-300"><a href="https://pin.it/VaLaQDlT6" alt="Pinterest Link" target="_blank" class="custom-selection inline-block">Pinterest</a></p>
             
             <h1 class="font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none" draggable="false">let's chat</h1>
         </div>
@@ -480,18 +495,21 @@ textarea:not(:placeholder-shown):invalid {
     /* Navbar responsiveness starts */
     .primary-navigation {
         position: fixed;
-        inset: 0 0 0 30%;
-        background: hsl(0 0% 0% / 0.0.75);
+        inset: 0 0 0 60%;
+        backdrop-filter: blur(30px);
         border-left: 1px solid;
         flex-direction: column;
         padding-top: min(30vh, 10rem);
-        transform: translateX(1000px);
-        transition: transform 500ms linear;
+        transform: translateX(100%); /*Initially offscreen*/
+        
     }
 
     .primary-navigation.open {
-    transform: translateX(0); /* Slide in */
+        transform: translateX(0);
+        opacity: 1;
+        transition: transform 300ms ease, opacity 300ms ease; /* Slide in */
     }
+
 
     .mobile-nav-toggle{
         position: fixed;
@@ -640,13 +658,6 @@ textarea:not(:placeholder-shown):invalid {
         margin-top: 0;
     }
 
-    /* About Section Continued */
-    .card{
-        display: flex;
-        align-items: center;
-        justify-content: centre;
-        background: red;
-    }
 
 }
 
