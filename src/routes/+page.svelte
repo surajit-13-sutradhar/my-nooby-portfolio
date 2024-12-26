@@ -55,7 +55,7 @@
         if (!name.trim() || !email.trim() || !message.trim()) {
             // Show the warning alert here
             showWarning = true
-            alert("Please fillup all the fields before sending")
+            alert("Please fill-up all the fields before sending ://")
             resetAlert()
             return; // Stop execution if validation fails
         }
@@ -158,10 +158,10 @@
 
 <!-- Navlinks or Primary navigation -->
 <header id="navLinks" class="primary-navigation flex font-sen font-regular fixed z-30 right-[1.67vw] top-1" class:open={isNavOpen}>
-    <a href="#home" class="hover-underline-animation  font-thin text-[14px] center m-[16px] text-[#FFFFFF] custom-selection" onclick={closeNav}
-        ><span aria-hidden="true">Home</span></a>
-    <a href="#about" class="hover-underline-animation  font-regular text-[14px] center m-[16px] text-[#FFFFFF] custom-selection" onclick={closeNav}>About</a>
-    <a href="#contact" class="hover-underline-animation  font-bold text-[14px] center m-[16px] text-[#93e0ff] custom-selection" onclick={closeNav}><span aria-hidden="true">Contact</span></a>
+    <a href="#home" class="hover-underline-animation  font-thin text-[14px] center m-[16px] text-[#FFFFFF]" onclick={closeNav}
+        ><span aria-hidden="true" class="custom-selection">Home</span></a>
+    <a href="#about" class="hover-underline-animation  font-regular text-[14px] center m-[16px] text-[#FFFFFF] custom-selection" onclick={closeNav}><span aria-hidden="true" class="custom-selection">About</span></a>
+    <a href="#contact" class="hover-underline-animation  font-bold text-[14px] center m-[16px] text-[#93e0ff] custom-selection" onclick={closeNav}><span aria-hidden="true" class="custom-selection">Contact</span></a>
 </header>
 
 <!-- --------------- HOME SECTION ----------------  -->
@@ -202,8 +202,8 @@
             <p class="photo-text-mobile font-medium text-[1.042vw] leading-[100%] text-[#CABBFF] text-right custom-selection w-[70%]">
                 "Passionate about creating visually captivating and user-centric designs, I am a designer who thrives on turning ideas into stunning dianding, I aim to tell compelling stories through visuals that leave a lasting impression. Constantly exploring trends and pushing boundaries, I believe in the power of design to transform the way people interact with the world."
             </p>
-            <div class="photo-image-mobile w-[70%] h-[22.292vw] bg-gray-400">
-                
+            <div class="photo-image-mobile w-[70%] h-[22.292vw] backdrop-blur-lg rounded-sm relative overflow-hidden">
+                <img src="img-self.png" alt="Profile" class="object-cover w-full h-full rounded-sm transform transition-transform duration-200 ease-in hover:duration-[800ms] hover:scale-[1.05]">
             </div>
         </div>
     </div>
@@ -215,15 +215,15 @@
         <!-- Section 1 -->
         <div class="card h-[15.104vw] relative">
             <div id="card" class="w-[13.75vw] flex flex-col">
-                <a href="https://github.com/surajit-13-sutradhar" aria-label="Github">
+                <a href="https://github.com/surajit-13-sutradhar" aria-label="Github" target="_blank">
                     <div class="w-full h-[12vw] cursor-pointer backdrop-blur-lg border-[1px] border-[#bbbbbb] flex justify-center rounded-md relative overflow-hidden group">
                         <!-- Github Logo -->
-                        <img src="icon-github.svg" alt="Github Logo" class="w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0">
+                        <img src="icon-github.svg" alt="Github Logo" class="w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0 select-none">
                         <!-- Background image -->
                         <img src="img-github.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-left transition-opacity duration-500 group-hover:opacity-100">
                     </div>
                 </a>
-                <span class="hover-underline-animation left font-sen font-medium h-[1.67vw] text-[#D9D9D9] custom-selection">
+                <span class="font-sen font-medium h-[1.67vw] text-[#D9D9D9] custom-selection select-none">
                     My Github
                 </span>
             </div>
@@ -232,16 +232,16 @@
         <!-- Section 2 -->
         <div class="card h-[18.49vw] relative">
             <div class="w-[15.625vw] flex flex-col absolute right-0">
-                <a href="https://frontendflow.hashnode.dev/" aria-label="Spotify" target="_blank">
+                <a href="https://open.spotify.com/user/31ksuirhm2vzvhcxc33bcr2dme5y?si=WsEd_wMdSe2M7pGhEUxZzw" aria-label="Spotify" target="_blank">
                     <div class="w-full h-[13.5vw] backdrop-blur-lg border-[1px] border-[#bbbbbb] flex justify-center rounded-md cursor-pointer relative overflow-hidden group">
                         <!-- Spotify Icon -->
-                        <img src="icon-spotify.svg" alt="Github Logo" class="w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0">
+                        <img src="icon-spotify.svg" alt="Github Logo" class="w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0 select-none">
                         <!-- Background Image -->
                         <img src="img-spotify.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-top transition-opacity duration-500 group-hover:opacity-100">
     
                     </div>
                 </a>
-                <span class="font-sen font-medium h-[1.67vw] text-[#D9D9D9] custom-selection cursor-default">
+                <span class="font-sen font-medium h-[1.67vw] text-[#D9D9D9] custom-selection cursor-default select-none">
                     My Spotify
                 </span>
             </div>
@@ -250,16 +250,16 @@
         <!-- Section 3 -->
         <div class="card h-[15.313vw] relative">
             <div class="w-[19.792vw] flex flex-col">
-                <a href="https://frontendflow.hashnode.dev/" aria-label="Hashnode">
+                <a href="https://frontendflow.hashnode.dev/" aria-label="Hashnode" target="_blank">
                     <div class="w-full h-[13.5vw] backdrop-blur-lg border-[1px] border-[#bbbbbb] flex justify-center rounded-md cursor-pointer relative overflow-hidden group">
                         <!-- Hashnode Icon -->
-                        <img src="icon-hashnode.svg" alt="Hashnode Logo" class="w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0">
+                        <img src="icon-hashnode.svg" alt="Hashnode Logo" class="w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0 select-none">
                         <!-- Background image -->
                         <img src="img-hashnode.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-top transition-opacity duration-500 group-hover:opacity-100">
                     </div>
                 </a>
                 
-                <span class="font-sen font-medium h-[1.67vw] text-[#D9D9D9] custom-selection cursor-default">
+                <span class="font-sen font-medium h-[1.67vw] text-[#D9D9D9] custom-selection cursor-default select-none">
                     My Blogs
                 </span>
             </div>
@@ -292,13 +292,13 @@
             <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white mb-[1vw]" >
                 You can also find me on
             </p>
-            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff] hover:translate-x-2 transition-all duration-300"><a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn Link" target="_blank" class="custom-selection inline-block">LinkedIn</a></p>
-            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff] hover:translate-x-2 transition-all duration-300"><a href="https://www.behance.net/surajitsutradh2" alt="Behance Link" target="_blank" class="custom-selection inline-block">Behance</a></p>
-            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff] hover:translate-x-2 transition-all duration-300 w-"><a href="https://x.com/_the_crowww?t=-PVfGMsz4Gq0Sxu6Y1b1mA&s=09" alt="Twitter Handle Link" target="_blank" class="custom-selection inline-block">X</a></p>
-            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff] hover:translate-x-2 transition-all duration-300"><a href="mailto:surajitsutradhardes@gmail.com" alt="Gmail Link"  target="_blank" class="custom-selection inline-block">Gmail</a></p>
-            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff] hover:translate-x-2 transition-all duration-300"><a href="https://pin.it/VaLaQDlT6" alt="Pinterest Link" target="_blank" class="custom-selection inline-block">Pinterest</a></p>
+            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff]"><a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">LinkedIn</a></p>
+            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff]"><a href="https://www.behance.net/surajitsutradh2" alt="Behance Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">Behance</a></p>
+            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff]"><a href="https://x.com/_the_crowww?t=-PVfGMsz4Gq0Sxu6Y1b1mA&s=09" alt="Twitter Handle Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">X</a></p>
+            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff]"><a href="mailto:surajitsutradhardes@gmail.com" alt="Gmail Link"  target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">Gmail</a></p>
+            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff] "><a href="https://pin.it/VaLaQDlT6" alt="Pinterest Link" target="_blank" class="custom-selection hover:text-[#ffffff] transition-all duration-300">Pinterest</a></p>
             
-            <h1 class="font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none" draggable="false">let's chat</h1>
+            <h1 class="font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none " draggable="false">let's chat</h1>
         </div>
     </div>
 
@@ -311,6 +311,7 @@
                 type="text" 
                 placeholder="Name" 
                 class="w-full text-[#FFFFFF] border-none outline-none bg-transparent p-0 focus:ring-0 placeholder:text-[#CABBFF] placeholder:text-sm placeholder:font-sen"
+                title="Your name"
                 bind:value={name}
                 >
             </div>
@@ -323,7 +324,7 @@
                 placeholder="E-mail" 
                 name="email"  
                 class="w-full text-[#FFFFFF] border-none outline-none bg-transparent p-0 focus:ring-0 placeholder:text-[#CABBFF] placeholder:text-sm placeholder:font-sen" 
-                title="Please Enter a valid email address"
+                title="Please enter a valid E-mail address"
                 bind:value={email}
                 >
             </div>
@@ -333,9 +334,10 @@
                 <textarea id="message"
                 required  
                 type="text" 
-                placeholder="Write your message"  class="w-full h-[8.333vw] text-[#FFFFFF] leading-[100%] border-none outline-none bg-transparent p-0 focus:ring-0 resize-none placeholder:text-[#CABBFF] placeholder:text-sm placeholder:font-sen overflow-hidden"
-                maxlength="200"
+                placeholder="Write your message"  class="w-full h-[8.333vw] text-[#FFFFFF] leading-[100%] border-none outline-none bg-transparent p-0 focus:ring-0 resize-none placeholder:text-[#CABBFF] placeholder:text-sm placeholder:font-sen custom-scrollbar"
                 bind:value={message}
+                maxlength="300"
+                title="Write a brief explanation of your vision"
                 ></textarea>
             </div>
             
@@ -460,15 +462,28 @@ textarea:not(:placeholder-shown):invalid {
     transform: scaleX(1);
 }
 
-/* Left Alignment */
-.hover-underline-animation.left::after {
-    transform-origin: bottom right;
+/* Custom Scrollbar for textarea */
+/* Custom scrollbar styling */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 2px; /* Width of the scrollbar */
+    height: 10px; /* Height of the scrollbar */
 }
 
-.hover-underline-animation.left:hover::after {
-    transform-origin: bottom left;
-    transform: scaleX(1);
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
 }
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #3e7cda; /* Thumb color */
+    border-radius: 2px; /* Round edges */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #2527b9; /* Change color on hover */
+}
+
+
+
 
 /* Custom Scrollbar */
 :global(::-webkit-scrollbar) {
@@ -496,7 +511,7 @@ textarea:not(:placeholder-shown):invalid {
     .primary-navigation {
         position: fixed;
         inset: 0 0 0 60%;
-        backdrop-filter: blur(30px);
+        backdrop-filter: blur(20px);
         border-left: 1px solid;
         flex-direction: column;
         padding-top: min(30vh, 10rem);
@@ -657,8 +672,6 @@ textarea:not(:placeholder-shown):invalid {
         height: 250px;
         margin-top: 0;
     }
-
-
 }
 
 @supports (backdrop-filter: blur(1rem)){
