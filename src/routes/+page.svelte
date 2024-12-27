@@ -390,10 +390,6 @@
     --clr-error: red;
 }
 
-.hero{
-    height: 100lvh;
-}
-
 :global(*) {
     box-sizing: border-box;
 }
