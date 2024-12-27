@@ -404,7 +404,6 @@
 
 :global(body) {
     height: 100%;
-    background: blue;
     background-image: url('/DesktopBackgroundalt.png');
     background-size: cover;
     background-position: center;
