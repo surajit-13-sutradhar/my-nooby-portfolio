@@ -403,6 +403,8 @@
 }
 
 :global(body) {
+    height: 100dvh;
+    background-color: black;
     background-image: url('/DesktopBackgroundalt.png');
     background-size: cover;
     background-position: center;
