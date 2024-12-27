@@ -395,7 +395,7 @@
 }
 
 :global(html, body) {
-    height: 100%;
+    height: 100dvh;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -403,7 +403,7 @@
 }
 
 :global(body) {
-    height: 100%;
+    height: 100dvh;
     background-image: url('/DesktopBackgroundalt.png');
     background-size: cover;
     background-position: center;
