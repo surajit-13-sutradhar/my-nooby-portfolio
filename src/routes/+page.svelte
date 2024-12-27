@@ -280,7 +280,8 @@
         <div class="project-container py-[1.667vw] px-[3.333vw] h-[6.39vw] border-b-[1.5px] border-[#FFFFFF] flex flex-row items-center justify-between">
             <div class="project-info flex items-center gap-5">
                 <h3 class="font-sen font-bold text-[2.083vw] text-[#FFFFFF] select-none hover:translate-x-4 transition-all duration-300">This Portfolio</h3>
-                <img src="/linklogo.svg" alt="External Link Svg" class="w-[1.406vw] scale-1 cursor-pointer select-none" /> 
+                <a href="https://surajitsutradhar.vercel.app/"><img src="/linklogo.svg" alt="External Link Svg" class="w-[1.406vw] scale-1 cursor-pointer select-none" /> </a>
+                
             </div>
             <a href="https://github.com/surajit-13-sutradhar/my-nooby-portfolio" target="_blank"><img src="/github.svg" alt="Github link" class="w-[3.5vw] scale-1 cursor-pointer select-none"></a>
         </div>
