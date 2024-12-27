@@ -200,7 +200,7 @@
         
 
         <div class="photo-mobile w-[32.292vw] pt-[7.2vw] flex flex-col justify-end items-end gap-[1.5rem]">
-            <p class="photo-text-mobile font-medium text-[1.042vw] leading-[100%] text-[#CABBFF] text-right custom-selection w-[70%]">
+            <p class="photo-text-mobile font-medium text-[1.042vw] leading-[100%] text-[#CABBFF] text-right custom-selection w-[70%] font-sen">
                 Combining my love for design and aesthetics with my passion for code. I love listening to music, watching movies and creating art in my free time. Ocassionally I also write blogs.
             </p>
             <div class="photo-image-mobile w-[70%] h-[22.292vw] backdrop-blur-lg rounded-sm relative overflow-hidden">
@@ -354,7 +354,7 @@
             <button type="submit" class="px-[32px] py-[10px] inline-block bg-[#3872f0] text-[#FFFFFF] text-[16px] font-sen font-medium self-start rounded-full border-[1px] border-transparent hover:bg-[#2a2a5f] hover:text-[#FFFFFF] hover:border-[#3872f0] transition duration-300 ease-in-out onclick:bg-[#3872f0] onclick:border-[#3872f0] custom-selection" onclick={handleSubmit}>
                 Send
             </button>
-            <span class="font-medium text-[#ffffff] custom-selection">or</span>
+            <span class="font-medium font-sen text-[#ffffff] custom-selection">or</span>
             <a href="mailto:surajitsutradhardes@gmail.com" target="_blank" class="px-[24px] py-[9px] inline-block bg-[#fff5f5] text-[#ff3d3d] text-[16px] font-sen font-medium self-start rounded-full border-[1px] border-transparent hover:bg-[#ff3d3d] hover:text-[#FFFFFF] hover:border-[#ffffff] transition duration-300 ease-in-out onclick:bg-[#3872f0] onclick:border-[#3872f0] custom-selection">Mail me!</a>
         </div>
         
@@ -378,7 +378,7 @@
     
     <!-- Attribution -->
          
-    <div class="attribution absolute bottom-[0.2rem] w-[100vw] px-[2rem] leading-tight text-center text-[#fcfcfc] text-[12px] custom-selection">Inspired by <a href="https://leopoldmanguette.com/" target="_blank" class="text-[#CABBFF] cursor-pointer hover:text-[#716d97] underline-offset-1 underline font-bold custom-selection">Leopold Manguette</a>'s Portfolio website. Coded in Visual Studio Code using SvelteKit, TailwindCSS and Firebase by yours truly.</div>
+    <div class="attribution font-sen absolute bottom-[0.2rem] w-[100vw] px-[2rem] leading-tight text-center text-[#fcfcfc] text-[12px] custom-selection">Inspired by <a href="https://leopoldmanguette.com/" target="_blank" class="text-[#CABBFF] cursor-pointer hover:text-[#716d97] underline-offset-1 underline font-bold custom-selection">Leopold Manguette</a>'s Portfolio website. Coded in Visual Studio Code using SvelteKit, TailwindCSS and Firebase by yours truly.</div>
 </section>
   
 
