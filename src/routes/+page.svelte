@@ -214,7 +214,7 @@
 
         <!-- Section 1 -->
     
-        <div id="card" class="hero w-[13.75vw] h-[15.104vw] relative card-mobile-container">
+        <div id="card" class="w-[13.75vw] h-[15.104vw] relative card-mobile-container">
             <a href="https://github.com/surajit-13-sutradhar" aria-label="Github" target="_blank" class="w-full h-full cursor-pointer backdrop-blur-lg border-[1px] border-[#bbbbbb] flex justify-center rounded-md relative overflow-hidden group">
                 <!-- Github Logo -->
                 <img src="icon-github.svg" alt="Github Logo" class="card-logo w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0 select-none">
