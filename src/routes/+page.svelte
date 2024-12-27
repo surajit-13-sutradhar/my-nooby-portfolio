@@ -391,7 +391,7 @@
 }
 
 .hero{
-    height: 100svh;
+    height: 100lvh;
 }
 
 :global(*) {
@@ -399,7 +399,7 @@
 }
 
 :global(html, body) {
-    height: 100svh;
+    height: 100lvh;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -407,7 +407,7 @@
 }
 
 :global(body) {
-    height: 100svh;
+    height: 100lvh;
     background-image: url('/DesktopBackgroundalt.png');
     background-size: cover;
     background-position: center;
