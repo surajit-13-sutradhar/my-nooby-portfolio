@@ -288,7 +288,7 @@
 
 <!-- --------------- CONTACT SECTION ---------------- -->
 <div class="h-[1px] bg-[#3872f0] mx-[15vw]"></div>
-<section id="contact" class="contact-section-mobile min-h-screen pr-[25.104vw] w-full flex flex-row justify-between relative">
+<section id="contact" class="contact-section-mobile h-[100svh]  pr-[25.104vw] w-full flex flex-row justify-between relative">
     <div class="links-mobile w-[33.125vw] flex flex-col justify-end">
         <div class="ml-[32px] mb-[3.333vw]">
             <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white mb-[1vw] custom-selection" >
