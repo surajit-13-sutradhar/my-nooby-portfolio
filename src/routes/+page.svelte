@@ -6,6 +6,7 @@
     import {Spring} from 'svelte/motion'
     import { invalidate } from '$app/navigation'
     import {fly, fade} from 'svelte/transition'
+
     // import Rect from './Rect.svelte'
 
     // Date Time Functionality
@@ -61,7 +62,7 @@
         }
 
         // Sending Data to Firebase
-        const firebaseUrl = import.meta.env.VITE_FIREBASE_URL
+        const firebaseUrl = import.meta.env.VITE_FIREBASE_DATABASE_URL
         const response = await fetch(firebaseUrl,
             {
                 method: 'POST',
@@ -309,7 +310,7 @@
     
     <h1 class="about-heading-mobile font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none mt-[2.5rem]" draggable="false">let's chat</h1>
 
-    <form class="contact-form-mobile w-[23.594vw] flex flex-col justify-center">
+    <form class="contact-form-mobile w-[23.54vw] flex flex-col justify-center">
         <div id="inputs" class="flex flex-col gap-[1.354vw] w-full">
             <div id="name">
                 <label for="name" class="font-sen text-[#FFFFFF] custom-selection">Name</label>
@@ -801,8 +802,6 @@ textarea:not(:placeholder-shown):invalid {
         justify-content: start;
         padding-right: 0;
     }
-
-
 
     .contact-form-mobile{
         width: min(80vw, 45vh);
