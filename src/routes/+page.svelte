@@ -209,60 +209,65 @@
     </div>
 
     <!-- About Continued -->
-    <div class="w-[49.844vw] mx-auto my-[3.33vw] gap-0">
+    <div class="cards-section-mobile w-[49.844vw] mx-auto my-[3.33vw] mt-[4rem]">
 
 
         <!-- Section 1 -->
-        <div class="card h-[15.104vw] relative">
-            <div id="card" class="w-[13.75vw] flex flex-col">
-                <a href="https://github.com/surajit-13-sutradhar" aria-label="Github" target="_blank">
-                    <div class="w-full h-[12vw] cursor-pointer backdrop-blur-lg border-[1px] border-[#bbbbbb] flex justify-center rounded-md relative overflow-hidden group">
-                        <!-- Github Logo -->
-                        <img src="icon-github.svg" alt="Github Logo" class="w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0 select-none">
-                        <!-- Background image -->
-                        <img src="img-github.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-left transition-opacity duration-500 group-hover:opacity-100">
-                    </div>
-                </a>
-                <span class="font-sen font-medium h-[1.67vw] text-[#D9D9D9] custom-selection select-none">
-                    My Github
-                </span>
-            </div>
+    
+        <div id="card" class="w-[13.75vw] h-[15.104vw] relative card-mobile-container">
+            <a href="https://github.com/surajit-13-sutradhar" aria-label="Github" target="_blank" class="w-full h-full cursor-pointer backdrop-blur-lg border-[1px] border-[#bbbbbb] flex justify-center rounded-md relative overflow-hidden group">
+                <!-- Github Logo -->
+                <img src="icon-github.svg" alt="Github Logo" class="card-logo w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0 select-none">
+                <!-- Background image -->
+                <img src="img-github.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-left transition-opacity duration-500 group-hover:opacity-100">
+            </a>
+            <span class="font-sen text-[12px] text-[#D9D9D9] custom-selection select-none">
+                My Github
+            </span>
+        </div>
+
+        <!-- Section 2 Mobile -->
+        <div id="card" class="w-[19.792vw] h-[15.104vw] flex-col relative card-mobile-container spotify-card-desktop">
+            <a href="https://www.behance.net/surajitsutradh2" aria-label="Behance Link" target="_blank" class="w-full h-full cursor-pointer backdrop-blur-lg border-[1px] border-[#bbbbbb] flex justify-center rounded-md relative overflow-hidden group">
+                <!-- Spotify Icon -->
+                <img src="icon-behance.svg" alt="Behance Logo" class="card-logo w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0 select-none">
+                <!-- Background Image -->
+                <img src="img-behance.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-top transition-opacity duration-500 group-hover:opacity-100">
+                
+            </a>
+            <span class="font-sen text-[12px] text-[#D9D9D9] custom-selection select-none">
+                My Behance
+            </span>
         </div>
         
+        
         <!-- Section 2 -->
-        <div class="card h-[18.49vw] relative">
-            <div class="w-[15.625vw] flex flex-col absolute right-0">
-                <a href="https://open.spotify.com/user/31ksuirhm2vzvhcxc33bcr2dme5y?si=WsEd_wMdSe2M7pGhEUxZzw" aria-label="Spotify" target="_blank">
-                    <div class="w-full h-[13.5vw] backdrop-blur-lg border-[1px] border-[#bbbbbb] flex justify-center rounded-md cursor-pointer relative overflow-hidden group">
-                        <!-- Spotify Icon -->
-                        <img src="icon-spotify.svg" alt="Github Logo" class="w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0 select-none">
-                        <!-- Background Image -->
-                        <img src="img-spotify.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-top transition-opacity duration-500 group-hover:opacity-100">
-    
-                    </div>
+        <div class="card h-[18.49vw] mt-[1rem] relative spotify-card-mobile-container">
+            <div class="w-[15.625vw] h-full right-0 spotify-card-mobile">
+                <a href="https://www.behance.net/surajitsutradh2" aria-label="Behance" target="_blank" class="w-full h-[13.5vw] backdrop-blur-lg border-[1px] border-[#bbbbbb] flex justify-center rounded-md cursor-pointer relative overflow-hidden group">
+                    <!-- Behance Icon -->
+                    <img src="icon-behance.svg" alt="Hashnode Logo" class="w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0 select-none">
+                    <!-- Background Image -->
+                    <img src="img-behance.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-top transition-opacity duration-500 group-hover:opacity-100">
+                        
                 </a>
-                <span class="font-sen font-medium h-[1.67vw] text-[#D9D9D9] custom-selection cursor-default select-none">
-                    My Spotify
+                <span class="font-sen text-[12px] text-[#D9D9D9] custom-selection cursor-default select-none">
+                    My Behance
                 </span>
             </div>
         </div>
 
         <!-- Section 3 -->
-        <div class="card h-[15.313vw] relative">
-            <div class="w-[19.792vw] flex flex-col">
-                <a href="https://frontendflow.hashnode.dev/" aria-label="Hashnode" target="_blank">
-                    <div class="w-full h-[13.5vw] backdrop-blur-lg border-[1px] border-[#bbbbbb] flex justify-center rounded-md cursor-pointer relative overflow-hidden group">
-                        <!-- Hashnode Icon -->
-                        <img src="icon-hashnode.svg" alt="Hashnode Logo" class="w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0 select-none">
-                        <!-- Background image -->
-                        <img src="img-hashnode.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-top transition-opacity duration-500 group-hover:opacity-100">
-                    </div>
-                </a>
-                
-                <span class="font-sen font-medium h-[1.67vw] text-[#D9D9D9] custom-selection cursor-default select-none">
-                    My Blogs
-                </span>
-            </div>
+        <div id="card" class="w-[19.792vw] h-[15.104vw] flex-col relative card-mobile-container">
+            <a href="https://frontendflow.hashnode.dev/" aria-label="Hashnode" target="_blank" class="w-full h-full cursor-pointer backdrop-blur-lg border-[1px] border-[#bbbbbb] flex justify-center rounded-md relative overflow-hidden group">
+                <!-- Hashnode Logo -->
+                <img src="icon-hashnode.svg" alt="Hashnode Logo" class="card-logo w-[3.333vw] transition-opacity duration-500 group-hover:opacity-0 select-none">
+                <!-- Background image -->
+                <img src="img-hashnode.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-top transition-opacity duration-500 group-hover:opacity-100">
+            </a>
+            <span class="font-sen text-[12px] text-[#D9D9D9] custom-selection select-none">
+                My Blogs
+            </span>
         </div>
 
     </div>
@@ -270,39 +275,41 @@
     <!-- ---------- WORKS ---------- -->
     <!-- <div class="h-[1px] bg-slate-50 mx-[15vw]"></div> -->
     <div id="works" class="w-[49.844vw] h-[16.39vw] mx-auto my-[3.33vw]">
-        <div class="pt-[3.33vw] px-[3.33vw] border-b-[1.5px] border-[#FFFFFF]">
-            <h2 class="font-sen font-medium text-[1.667vw] text-[#FFFFFF] select-none">Stuff I made</h2>
-        </div>
-        <div id="project-info" class="py-[1.667vw] px-[3.333vw] h-[6.39vw] border-b-[1.5px] border-[#FFFFFF] flex flex-row items-center justify-between">
-            <div class="flex items-center gap-5">
+        <h2 class="mobile-heading font-sen font-medium text-[1.667vw] text-[#FFFFFF] select-none pt-[3.33vw] px-[3.33vw] border-b-[1.5px] border-[#FFFFFF]">Stuff I made</h2>
+        <div class="project-container py-[1.667vw] px-[3.333vw] h-[6.39vw] border-b-[1.5px] border-[#FFFFFF] flex flex-row items-center justify-between">
+            <div class="project-info flex items-center gap-5">
                 <h3 class="font-sen font-bold text-[2.083vw] text-[#FFFFFF] select-none hover:translate-x-4 transition-all duration-300">This Portfolio</h3>
-                <img src="/linklogo.svg" alt="External Link Svg" class="w-[1.406vw] h-[1.406vw] cursor-pointer" /> 
+                <img src="/linklogo.svg" alt="External Link Svg" class="w-[1.406vw] scale-1 cursor-pointer" /> 
             </div>
-            <a href="https://github.com/surajit-13-sutradhar/my-nooby-portfolio" target="_blank"><img src="/github.svg" alt="Github link" class="w-[3.5vw] h-[3.5vw] cursor-pointer"></a>
-            
+            <a href="https://github.com/surajit-13-sutradhar/my-nooby-portfolio" target="_blank"><img src="/github.svg" alt="Github link" class="w-[3.5vw] scale-1 cursor-pointer"></a>
         </div>
     </div>
 </section>
 
 <!-- --------------- CONTACT SECTION ---------------- -->
 <div class="h-[1px] bg-[#3872f0] mx-[15vw]"></div>
-<section id="contact" class="min-h-screen pr-[25.104vw] w-full flex flex-row justify-between relative">
-    <div class="w-[33.125vw] flex flex-col justify-end">
+<section id="contact" class="contact-section-mobile min-h-screen pr-[25.104vw] w-full flex flex-row justify-between relative">
+    <div class="links-mobile w-[33.125vw] flex flex-col justify-end">
         <div class="ml-[32px] mb-[3.333vw]">
             <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white mb-[1vw]" >
                 You can also find me on
             </p>
+            <!-- Linked In -->
             <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff]"><a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">LinkedIn</a></p>
-            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff]"><a href="https://www.behance.net/surajitsutradh2" alt="Behance Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">Behance</a></p>
+            <!-- Behance -->
+            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff]"><a href="https://open.spotify.com/user/31ksuirhm2vzvhcxc33bcr2dme5y?si=WsEd_wMdSe2M7pGhEUxZzw" alt="Spotify Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">Spotify</a></p>
+            <!-- X -->
             <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff]"><a href="https://x.com/_the_crowww?t=-PVfGMsz4Gq0Sxu6Y1b1mA&s=09" alt="Twitter Handle Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">X</a></p>
-            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff]"><a href="mailto:surajitsutradhardes@gmail.com" alt="Gmail Link"  target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">Gmail</a></p>
+            <!-- Pinterest -->
             <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff] "><a href="https://pin.it/VaLaQDlT6" alt="Pinterest Link" target="_blank" class="custom-selection hover:text-[#ffffff] transition-all duration-300">Pinterest</a></p>
             
             <h1 class="font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none " draggable="false">let's chat</h1>
         </div>
     </div>
+    
+    <h1 class="about-heading-mobile font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none mt-[2.5rem]" draggable="false">let's chat</h1>
 
-    <form id="contact-form" class="w-[23.594vw] flex flex-col justify-center">
+    <form class="contact-form-mobile w-[23.594vw] flex flex-col justify-center">
         <div id="inputs" class="flex flex-col gap-[1.354vw] w-full">
             <div id="name">
                 <label for="name" class="font-sen text-[#FFFFFF]">Name</label>
@@ -330,11 +337,11 @@
             </div>
             
             <div id="form-group">
-                <label for="Text message" class="font-sen text-[#FFFFFF]">Details about your project in brief</label>
+                <label for="Text message" class="font-sen  text-[#FFFFFF]">Details about your project in brief</label>
                 <textarea id="message"
                 required  
                 type="text" 
-                placeholder="Write your message"  class="w-full h-[8.333vw] text-[#FFFFFF] leading-[100%] border-none outline-none bg-transparent p-0 focus:ring-0 resize-none placeholder:text-[#CABBFF] placeholder:text-sm placeholder:font-sen custom-scrollbar"
+                placeholder="Write your message"  class="w-full h-[12.333vh] text-[#FFFFFF] leading-[100%] border-none outline-none bg-transparent p-0 focus:ring-0 resize-none placeholder:text-[#CABBFF] placeholder:text-sm placeholder:font-sen custom-scrollbar"
                 bind:value={message}
                 maxlength="300"
                 title="Write a brief explanation of your vision"
@@ -342,10 +349,31 @@
             </div>
             
         </div>
-        <button type="submit" class="px-[32px] py-[16px] inline-block mt-[2.292vw] bg-[#3872f0] text-[#FFFFFF] text-[1.25vw] font-sen font-medium self-start rounded-full border-[1px] border-transparent hover:bg-[#2a2a5f] hover:text-[#FFFFFF] hover:border-[#3872f0] transition duration-300 ease-in-out onclick:bg-[#3872f0] onclick:border-[#3872f0]" onclick={handleSubmit}>
-            Send
-        </button>
+        <div class="flex items-center justify-between mt-[1rem]">
+            <button type="submit" class="px-[32px] py-[10px] inline-block bg-[#3872f0] text-[#FFFFFF] text-[16px] font-sen font-medium self-start rounded-full border-[1px] border-transparent hover:bg-[#2a2a5f] hover:text-[#FFFFFF] hover:border-[#3872f0] transition duration-300 ease-in-out onclick:bg-[#3872f0] onclick:border-[#3872f0]" onclick={handleSubmit}>
+                Send
+            </button>
+            <span class="font-medium text-[#ffffff]">or</span>
+            <a href="mailto:surajitsutradhardes@gmail.com" target="_blank" class="px-[24px] py-[9px] inline-block bg-[#fff5f5] text-[#ff3d3d] text-[16px] font-sen font-medium self-start rounded-full border-[1px] border-transparent hover:bg-[#ff3d3d] hover:text-[#FFFFFF] hover:border-[#ffffff] transition duration-300 ease-in-out onclick:bg-[#3872f0] onclick:border-[#3872f0]">Mail me!</a>
+        </div>
+        
     </form>
+
+    <!-- Links in mobile -->
+    <div class="links-mobile-icons absolute bottom-[5vh]">
+        <p class="text-[2vh] font-medium text-[#CABBFF]">You can also find me on</p>
+        <div class="flex gap-2 justify-between items-center mt-[0.5rem]">
+            <a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn Link" target="_blank"><img src="icon-linkedin.svg" alt="LinkedIn Link" class="scale-1 w-[32px]"/></a>
+
+            <a href="https://www.behance.net/surajitsutradh2" alt="Spotify Link" target="_blank"><img src="icon-spotify.svg" alt="Spotify Icon" class="scale-1 w-[32px]"/></a>
+
+            <a href="https://x.com/_the_crowww?t=-PVfGMsz4Gq0Sxu6Y1b1mA&s=09" alt="Twitter Handle Link" target="_blank"><img src="icon-twitter.svg" alt="Twitter Icon" class="scale-1 w-[30px]"/></a>
+
+            <a href="https://pin.it/VaLaQDlT6" alt="Pinterest Link" target="_blank"><img src="icon-pinterest.svg" alt="Pinterest Icon" class="scale-1 w-[32px]"/></a>
+        </div>
+    </div>
+    
+
 </section>
   
 
@@ -505,8 +533,27 @@ textarea:not(:placeholder-shown):invalid {
     border-radius: 10px
 }
 
+@media (min-width: 45em){
+    .spotify-card-mobile{
+        position: absolute;
+    }
+
+    .spotify-card-desktop{
+        display: none;
+    }
+
+    .about-heading-mobile {
+        display: none;
+    }
+
+    .links-mobile-icons {
+        display: none;
+    }
+
+}
+
 /* Navbar Responsive */
-@media (max-width: 35em){
+@media (max-width: 45em){
     /* Navbar responsiveness starts */
     .primary-navigation {
         position: fixed;
@@ -652,6 +699,7 @@ textarea:not(:placeholder-shown):invalid {
         width: 100%;
         /* background: yellow; */
         display: flex;
+        flex-direction: column-reverse;
         gap: 1rem;
         justify-content: center;
         align-items: center;
@@ -668,10 +716,93 @@ textarea:not(:placeholder-shown):invalid {
     }
 
     .photo-image-mobile{
-        width: min(40vh, 250px);
+        width: min(30vh, 250px);
         height: 250px;
         margin-top: 0;
     }
+
+
+    /* Cards section mobile */
+    .cards-section-mobile{
+        width: 25vh;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        position: relative;
+    }
+
+    .spotify-card-mobile-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: auto;
+    }
+
+    .card-mobile-container{
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        width: 25vh;
+        height: 25vh;
+    }
+
+    .spotify-card-mobile-container{
+        display: none;
+    }
+
+    .card-logo{
+        width: 10vh;
+    }
+
+    /* Works */
+    #works{
+        width: 70%;
+        height: 20vh;
+    }
+
+    .mobile-heading {
+        font-size: 16px;
+    }
+
+    .project-container{
+        height: 64px;
+    }
+
+    .project-container > a > img {
+        width: 36px;
+    }
+
+    .project-info > h3{
+        font-weight: 400;
+        font-size: 20px;
+        margin: 2rem 0;
+    }
+
+    .project-info > img{
+        width: 16px;
+    }
+
+    /* Contact Section */
+    .links-mobile{
+        display: none;
+    }
+
+    /* Contact form */
+    .contact-section-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding-right: 0;
+    }
+
+
+
+    .contact-form-mobile{
+        width: min(80vw, 45vh);
+        margin: 3rem 0;
+    }
+
 }
 
 @supports (backdrop-filter: blur(1rem)){
