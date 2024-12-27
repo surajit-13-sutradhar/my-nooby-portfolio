@@ -190,7 +190,7 @@
     <div class="intro-mobile pr-[25.104vw] w-full flex flex-row justify-between relative ">
         <div class="about-mobile w-[33.125vw] flex flex-col justify-end">
             <div class="top-intro-mobile pl-[32px] pb-[3.333vw]">
-                <p class="about-text-mobile font-sen font-medium leading-[100%] text-[1.667vw] text-white custom-selection">"Passionate about creating visually captivating and user-centric designs, I am a designer who thrives on turning ideas into stunning digital experiences. ut the way people interact with the world."</p>
+                <p class="about-text-mobile font-sen font-medium leading-[100%] text-[1.667vw] text-white custom-selection">Passionate about creating visually captivating and user-centric designs, I am a designer who aims to turn ideas into stunning digital experiences.</p>
                 <h1 class="about-heading-mobile font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none" draggable="false">about</h1>
             </div>
 
@@ -200,10 +200,10 @@
 
         <div class="photo-mobile w-[32.292vw] pt-[7.2vw] flex flex-col justify-end items-end gap-[1.5rem]">
             <p class="photo-text-mobile font-medium text-[1.042vw] leading-[100%] text-[#CABBFF] text-right custom-selection w-[70%]">
-                "Passionate about creating visually captivating and user-centric designs, I am a designer who thrives on turning ideas into stunning dianding, I aim to tell compelling stories through visuals that leave a lasting impression. Constantly exploring trends and pushing boundaries, I believe in the power of design to transform the way people interact with the world."
+                Combining my love for design and aesthetics with my passion for code. I love listening to music, watching movies and creating art in my free time. Ocassionally I also write blogs.
             </p>
             <div class="photo-image-mobile w-[70%] h-[22.292vw] backdrop-blur-lg rounded-sm relative overflow-hidden">
-                <img src="img-self.png" alt="Profile" class="object-cover w-full h-full rounded-sm transform transition-transform duration-200 ease-in hover:duration-[800ms] hover:scale-[1.05]">
+                <img src="img-self.png" alt="Profile" class="object-cover w-full h-full rounded-sm transform transition-transform duration-200 ease-in hover:duration-[800ms] hover:scale-[1.05] select-none">
             </div>
         </div>
     </div>
@@ -279,9 +279,9 @@
         <div class="project-container py-[1.667vw] px-[3.333vw] h-[6.39vw] border-b-[1.5px] border-[#FFFFFF] flex flex-row items-center justify-between">
             <div class="project-info flex items-center gap-5">
                 <h3 class="font-sen font-bold text-[2.083vw] text-[#FFFFFF] select-none hover:translate-x-4 transition-all duration-300">This Portfolio</h3>
-                <img src="/linklogo.svg" alt="External Link Svg" class="w-[1.406vw] scale-1 cursor-pointer" /> 
+                <img src="/linklogo.svg" alt="External Link Svg" class="w-[1.406vw] scale-1 cursor-pointer select-none" /> 
             </div>
-            <a href="https://github.com/surajit-13-sutradhar/my-nooby-portfolio" target="_blank"><img src="/github.svg" alt="Github link" class="w-[3.5vw] scale-1 cursor-pointer"></a>
+            <a href="https://github.com/surajit-13-sutradhar/my-nooby-portfolio" target="_blank"><img src="/github.svg" alt="Github link" class="w-[3.5vw] scale-1 cursor-pointer select-none"></a>
         </div>
     </div>
 </section>
@@ -291,7 +291,7 @@
 <section id="contact" class="contact-section-mobile min-h-screen pr-[25.104vw] w-full flex flex-row justify-between relative">
     <div class="links-mobile w-[33.125vw] flex flex-col justify-end">
         <div class="ml-[32px] mb-[3.333vw]">
-            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white mb-[1vw]" >
+            <p class="font-sen font-medium leading-[100%] text-[1.667vw] text-white mb-[1vw] custom-selection" >
                 You can also find me on
             </p>
             <!-- Linked In -->
@@ -312,36 +312,36 @@
     <form class="contact-form-mobile w-[23.594vw] flex flex-col justify-center">
         <div id="inputs" class="flex flex-col gap-[1.354vw] w-full">
             <div id="name">
-                <label for="name" class="font-sen text-[#FFFFFF]">Name</label>
+                <label for="name" class="font-sen text-[#FFFFFF] custom-selection">Name</label>
                 <input 
                 required id="name" 
                 type="text" 
                 placeholder="Name" 
-                class="w-full text-[#FFFFFF] border-none outline-none bg-transparent p-0 focus:ring-0 placeholder:text-[#CABBFF] placeholder:text-sm placeholder:font-sen"
+                class="w-full text-[#FFFFFF] border-none outline-none bg-transparent p-0 focus:ring-0 placeholder:text-[#CABBFF] placeholder:text-sm placeholder:font-sen placeholder:custom-selection placeholder:select-none"
                 title="Your name"
                 bind:value={name}
                 >
             </div>
             
             <div id="email">
-                <label for="Email" class="font-sen text-[#FFFFFF]">Email</label>
+                <label for="Email" class="font-sen text-[#FFFFFF] custom-selection">Email</label>
                 <input id="Email" 
                 required 
                 type="email" 
                 placeholder="E-mail" 
                 name="email"  
-                class="w-full text-[#FFFFFF] border-none outline-none bg-transparent p-0 focus:ring-0 placeholder:text-[#CABBFF] placeholder:text-sm placeholder:font-sen" 
+                class="w-full text-[#FFFFFF] border-none outline-none bg-transparent p-0 focus:ring-0 placeholder:text-[#CABBFF] placeholder:text-sm placeholder:font-sen placeholder:custom-selection placeholder:select-none" 
                 title="Please enter a valid E-mail address"
                 bind:value={email}
                 >
             </div>
             
             <div id="form-group">
-                <label for="Text message" class="font-sen  text-[#FFFFFF]">Details about your project in brief</label>
+                <label for="Text message" class="font-sen text-[#FFFFFF] custom-selection">Details about your project in brief</label>
                 <textarea id="message"
                 required  
                 type="text" 
-                placeholder="Write your message"  class="w-full h-[12.333vh] text-[#FFFFFF] leading-[100%] border-none outline-none bg-transparent p-0 focus:ring-0 resize-none placeholder:text-[#CABBFF] placeholder:text-sm placeholder:font-sen custom-scrollbar"
+                placeholder="Write your message"  class="w-full h-[12.333vh] text-[#FFFFFF] leading-[100%] border-none outline-none bg-transparent p-0 focus:ring-0 resize-none placeholder:text-[#CABBFF] placeholder:text-sm placeholder:font-sen custom-scrollbar placeholder:custom-selection placeholder:select-none"
                 bind:value={message}
                 maxlength="300"
                 title="Write a brief explanation of your vision"
@@ -350,30 +350,34 @@
             
         </div>
         <div class="flex items-center justify-between mt-[1rem]">
-            <button type="submit" class="px-[32px] py-[10px] inline-block bg-[#3872f0] text-[#FFFFFF] text-[16px] font-sen font-medium self-start rounded-full border-[1px] border-transparent hover:bg-[#2a2a5f] hover:text-[#FFFFFF] hover:border-[#3872f0] transition duration-300 ease-in-out onclick:bg-[#3872f0] onclick:border-[#3872f0]" onclick={handleSubmit}>
+            <button type="submit" class="px-[32px] py-[10px] inline-block bg-[#3872f0] text-[#FFFFFF] text-[16px] font-sen font-medium self-start rounded-full border-[1px] border-transparent hover:bg-[#2a2a5f] hover:text-[#FFFFFF] hover:border-[#3872f0] transition duration-300 ease-in-out onclick:bg-[#3872f0] onclick:border-[#3872f0] custom-selection" onclick={handleSubmit}>
                 Send
             </button>
-            <span class="font-medium text-[#ffffff]">or</span>
-            <a href="mailto:surajitsutradhardes@gmail.com" target="_blank" class="px-[24px] py-[9px] inline-block bg-[#fff5f5] text-[#ff3d3d] text-[16px] font-sen font-medium self-start rounded-full border-[1px] border-transparent hover:bg-[#ff3d3d] hover:text-[#FFFFFF] hover:border-[#ffffff] transition duration-300 ease-in-out onclick:bg-[#3872f0] onclick:border-[#3872f0]">Mail me!</a>
+            <span class="font-medium text-[#ffffff] custom-selection">or</span>
+            <a href="mailto:surajitsutradhardes@gmail.com" target="_blank" class="px-[24px] py-[9px] inline-block bg-[#fff5f5] text-[#ff3d3d] text-[16px] font-sen font-medium self-start rounded-full border-[1px] border-transparent hover:bg-[#ff3d3d] hover:text-[#FFFFFF] hover:border-[#ffffff] transition duration-300 ease-in-out onclick:bg-[#3872f0] onclick:border-[#3872f0] custom-selection">Mail me!</a>
         </div>
         
     </form>
 
     <!-- Links in mobile -->
-    <div class="links-mobile-icons absolute bottom-[5vh]">
-        <p class="text-[2vh] font-medium text-[#CABBFF]">You can also find me on</p>
+    <div class="links-mobile-icons absolute bottom-[5rem]">
+        <p class="text-[2vh] custom-selection font-medium text-[#CABBFF]">You can also find me on</p>
         <div class="flex gap-2 justify-between items-center mt-[0.5rem]">
-            <a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn Link" target="_blank"><img src="icon-linkedin.svg" alt="LinkedIn Link" class="scale-1 w-[32px]"/></a>
+            <a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn Link" target="_blank"><img src="icon-linkedin.svg" alt="LinkedIn Link" class="scale-1 w-[24px] select-none"/></a>
 
-            <a href="https://www.behance.net/surajitsutradh2" alt="Spotify Link" target="_blank"><img src="icon-spotify.svg" alt="Spotify Icon" class="scale-1 w-[32px]"/></a>
+            <a href="https://www.behance.net/surajitsutradh2" alt="Spotify Link" target="_blank"><img src="icon-spotify.svg" alt="Spotify Icon" class="scale-1 w-[24px] select-none"/></a>
 
-            <a href="https://x.com/_the_crowww?t=-PVfGMsz4Gq0Sxu6Y1b1mA&s=09" alt="Twitter Handle Link" target="_blank"><img src="icon-twitter.svg" alt="Twitter Icon" class="scale-1 w-[30px]"/></a>
+            <a href="https://x.com/_the_crowww?t=-PVfGMsz4Gq0Sxu6Y1b1mA&s=09" alt="Twitter Handle Link" target="_blank"><img src="icon-twitter.svg" alt="Twitter Icon" class="scale-1 w-[24px] select-none"/></a>
 
-            <a href="https://pin.it/VaLaQDlT6" alt="Pinterest Link" target="_blank"><img src="icon-pinterest.svg" alt="Pinterest Icon" class="scale-1 w-[32px]"/></a>
+            <a href="https://pin.it/VaLaQDlT6" alt="Pinterest Link" target="_blank"><img src="icon-pinterest.svg" alt="Pinterest Icon" class="scale-1 w-[28px] select-none"/></a>
         </div>
+
+        
     </div>
     
-
+    <!-- Attribution -->
+         
+    <div class="attribution absolute bottom-[0.2rem] w-[100vw] px-[2rem] leading-tight text-center text-[#fcfcfc] text-[12px] custom-selection">Inspired by <a href="https://leopoldmanguette.com/" target="_blank" class="text-[#CABBFF] cursor-pointer hover:text-[#716d97] underline-offset-1 underline font-bold custom-selection">Leopold Manguette</a>'s Portfolio website. Coded in Visual Studio Code using SvelteKit, TailwindCSS and Firebase by yours truly.</div>
 </section>
   
 
@@ -532,6 +536,8 @@ textarea:not(:placeholder-shown):invalid {
     background: #2527b9; /* Thumb hover color */
     border-radius: 10px
 }
+
+
 
 @media (min-width: 45em){
     .spotify-card-mobile{
