@@ -391,6 +391,7 @@
 }
 
 .hero{
+    height: 100vh;
     height:--webkit-fill-available;
 }
 
