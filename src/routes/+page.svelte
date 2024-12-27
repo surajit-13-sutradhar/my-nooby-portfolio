@@ -165,7 +165,7 @@
 </header>
 
 <!-- --------------- HOME SECTION ----------------  -->
-<section id="home" class="h-[100dvh] flex flex-col relative">
+<section id="home" class="h-[100svh] flex flex-col relative">
     
     <div class="flex flex-col gap-0 items-center justify-center flex-grow">
         <div class="intro">
