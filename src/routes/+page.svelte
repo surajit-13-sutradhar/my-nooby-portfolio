@@ -303,13 +303,13 @@
                 You can also find me on
             </p>
             <!-- Linked In -->
-            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff]"><a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">LinkedIn</a></p>
+            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#CABBFF]"><a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">LinkedIn</a></p>
             <!-- Spotify -->
-            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff]"><a href="https://open.spotify.com/user/31ksuirhm2vzvhcxc33bcr2dme5y?si=WsEd_wMdSe2M7pGhEUxZzw" alt="Spotify Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">Spotify</a></p>
+            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#CABBFF]"><a href="https://open.spotify.com/user/31ksuirhm2vzvhcxc33bcr2dme5y?si=WsEd_wMdSe2M7pGhEUxZzw" alt="Spotify Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">Spotify</a></p>
             <!-- X -->
-            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff]"><a href="https://x.com/_the_crowww?t=-PVfGMsz4Gq0Sxu6Y1b1mA&s=09" alt="Twitter Handle Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">X</a></p>
+            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#CABBFF]"><a href="https://x.com/_the_crowww?t=-PVfGMsz4Gq0Sxu6Y1b1mA&s=09" alt="Twitter Handle Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">X</a></p>
             <!-- Pinterest -->
-            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff] "><a href="https://pin.it/VaLaQDlT6" alt="Pinterest Link" target="_blank" class="custom-selection hover:text-[#ffffff] transition-all duration-300">Pinterest</a></p>
+            <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#CABBFF] "><a href="https://pin.it/VaLaQDlT6" alt="Pinterest Link" target="_blank" class="custom-selection hover:text-[#ffffff] transition-all duration-300">Pinterest</a></p>
             
             <h1 class="font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none  tracking-tighter" draggable="false">let's chat</h1>
         </div>
