@@ -369,7 +369,7 @@
 
     <!-- Links in mobile -->
     <div class="links-mobile-icons absolute bottom-[5rem]">
-        <p class="text-[2vh] custom-selection font-medium text-[#CABBFF]">You can also find me on</p>
+        <p class="text-[2vh] custom-selection font-medium font-sen text-[#CABBFF]">You can also find me on</p>
         <div class="flex gap-2 justify-between items-center mt-[0.5rem]">
             <a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn Link" target="_blank"><img src="icon-linkedin.svg" alt="LinkedIn Link" class="scale-1 w-[24px] select-none"/></a>
 
