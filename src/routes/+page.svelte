@@ -139,7 +139,7 @@
 <section class="loading h-[100svh] w-full fixed bg-[#0a081d] flex flex-col gap-0 items-center justify-center flex-grow" class:fly-up={counter === 100}>
     <p class="font-charm text-[#CABBFF] text-[32px] select-none rounded-full">{counter}%</p>
     <div id="progress-bar-container" class="w-[12rem] h-[2px] bg-[#ffffff]">
-        <div id="progress-bar" style = "width: {counter}%; background: #7a32ff; transition: width 0.1s ease-in-out; height: 100%;"></div>
+        <div id="progress-bar" style = "width: {counter}%; background: #CABBFF; transition: width 0.1s ease-in-out; height: 100%;"></div>
     </div>
 </section>
 {:else}
