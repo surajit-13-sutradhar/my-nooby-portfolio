@@ -170,7 +170,7 @@
     <a href="#home" class="hover-underline-animation  font-thin text-[14px] center m-[16px] text-[#FFFFFF]" onclick={closeNav}
         ><span aria-hidden="true" class="custom-selection">Home</span></a>
     <a href="#about" class="hover-underline-animation  font-regular text-[14px] center m-[16px] text-[#FFFFFF] custom-selection" onclick={closeNav}><span aria-hidden="true" class="custom-selection">About</span></a>
-    <a href="#contact" class="hover-underline-animation  font-bold text-[14px] center m-[16px] text-[#93e0ff] custom-selection" onclick={closeNav}><span aria-hidden="true" class="custom-selection">Contact</span></a>
+    <a href="#contact" class="hover-underline-animation  font-bold text-[14px] center m-[16px] text-[#FFFFFF] custom-selection" onclick={closeNav}><span aria-hidden="true" class="custom-selection">Contact</span></a>
 </header>
 
 <!-- --------------- HOME SECTION ----------------  -->
