@@ -3,9 +3,6 @@
 <script>
     import {SvelteDate} from 'svelte/reactivity'
     import {onMount, onDestroy} from 'svelte'
-    import {Spring} from 'svelte/motion'
-    import { invalidate } from '$app/navigation'
-    import {fly, fade} from 'svelte/transition'
 
     // import Rect from './Rect.svelte'
 
@@ -101,6 +98,7 @@
     let isNavOpen = $state(false)
     let isToggling = $state(false)
 
+    
     
     // toggle function
     function toggleNav() {
