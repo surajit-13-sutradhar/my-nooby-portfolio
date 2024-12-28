@@ -113,26 +113,36 @@
     function closeNav() {
         isNavOpen = false
     }
+
+    // Loading Counter
+    let counter = $state(0);
+    let isLoading = $state(true);
+
+    // Increment counter
+    onMount(() => {
+        const interval = setInterval(() => {
+            if(counter < 100) {
+                counter += 2  // Increment by 2% (100% / 5 seconds / 10 updates per second)
+            } else {
+                clearInterval(interval)
+                setTimeout(() => {
+                    isLoading = false
+                }, 500)
+            }
+        }, 100) //Update every 100ms
+    })
+
 </script>
 
-
-<!-- ---------- Success Alert Card ----------- -->
-<div class="z-99999 left-1/2 fixed z-50 hidden">
-    <p class="font-sen text-[12px] px-[1.67vw] py-[3.33vw] text-[#FFFFFF] border-[1.5px] border-green-500 rounded-[16px] backdrop-blur-2xl mt-[0.5vw]">Your message was sent successfully!<br/> I'll reach out to you soon 😊  </p>
-</div>
-
-<!-- Warning alert card -->
-<div class="z-99999 left-1/2 fixed z-50 hidden">
-    <p class="font-sen text-[12px] px-[1.67vw] py-[3.33vw] text-[#FFFFFF] border-[1.5px] border-yellow-500 rounded-[16px] backdrop-blur-2xl mt-[0.5vw]">Please fill out all the fields before submitting 🥺</p>
-</div>
-
-<!-- Error alert card -->
-<div class="z-99999 left-1/2 fixed z-50 hidden">
-    <p class="font-sen text-[12px] px-[1.67vw] py-[3.33vw] text-[#FFFFFF] border-[1.5px] border-red-500 rounded-[16px] backdrop-blur-2xl mt-[0.5vw]">Oops! There was an error 😭 <br> Check connectivity or try again later... </p>
-</div>
- 
-
-
+{#if isLoading}
+<!-- ---------- Loading Screen -----------  -->
+<section class="loading h-[100svh] w-full fixed bg-[#0a081d] flex flex-col gap-0 items-center justify-center flex-grow" class:fly-up={counter === 100}>
+    <p class="font-charm text-[#CABBFF] text-[32px] select-none rounded-full">{counter}%</p>
+    <div id="progress-bar-container" class="w-[12rem] h-[2px] bg-[#ffffff]">
+        <div id="progress-bar" style = "width: {counter}%; background: #7a32ff; transition: width 0.1s ease-in-out; height: 100%;"></div>
+    </div>
+</section>
+{:else}
 <!-- ---------- DATE AND TIME ---------- -->
 <div id="date-time" class="fixed-top fixed-bottom-right m-[1.67vw] tracking-custom58 font-sen text-[16px] font-regular text-[#FFFFFF] pr-[1.67vw] custom-selection "> 
     {date.getHours()}:{pad(date.getMinutes())}:{pad(date.getSeconds())}
@@ -194,8 +204,6 @@
             </div>
 
         </div>
-
-        
 
         <div class="photo-mobile w-[32.292vw] pt-[7.2vw] flex flex-col justify-end items-end gap-[1.5rem]">
             <p class="photo-text-mobile font-medium text-[1.042vw] leading-[100%] text-[#CABBFF] text-right custom-selection w-[70%] font-sen">
@@ -379,12 +387,25 @@
          
     <div class="attribution font-sen absolute bottom-[0.2rem] w-[100vw] px-[2rem] leading-tight text-center text-[#fcfcfc] text-[12px] custom-selection">Inspired by <a href="https://leopoldmanguette.com/" target="_blank" class="text-[#CABBFF] cursor-pointer hover:text-[#716d97] underline-offset-1 underline font-bold custom-selection">Leopold Manguette</a>'s Portfolio website. Coded in Visual Studio Code using SvelteKit, TailwindCSS and Firebase by yours truly.</div>
 </section>
+
+
+{/if}
   
 
 
 
 
 <style lang="postcss">
+
+.loading{
+    transition: transform 0.5s ease-in;
+}
+
+.loading.fly-up{
+    transform: translateY(-100%);
+}
+
+
 :global(:root){
     --clr-success: rgb(0, 255, 0);
     --clr-error: red;
@@ -535,6 +556,12 @@ textarea:not(:placeholder-shown):invalid {
 :global(::-webkit-scrollbar-thumb:hover) {
     background: #2527b9; /* Thumb hover color */
     border-radius: 10px
+}
+
+
+/* Loading Screen */
+.loading{
+    z-index: 999;
 }
 
 
