@@ -99,7 +99,7 @@
     let isToggling = $state(false)
 
     
-    
+
     // toggle function
     function toggleNav() {
         // prevent rapid toggling while the ani
@@ -190,7 +190,7 @@
         <div class="about-mobile w-[33.125vw] flex flex-col justify-end">
             <div class="top-intro-mobile pl-[32px] pb-[3.333vw]">
                 <p class="about-text-mobile font-sen font-medium leading-[100%] text-[1.667vw] text-white custom-selection">Passionate about creating visually captivating and user-centric designs, I am a designer who aims to turn ideas into stunning digital experiences.</p>
-                <h1 class="about-heading-mobile font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none" draggable="false">about</h1>
+                <h1 class="font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none tracking-tighter" draggable="false">about</h1>
             </div>
 
         </div>
@@ -220,7 +220,7 @@
                 <!-- Background image -->
                 <img src="img-github.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-left transition-opacity duration-500 group-hover:opacity-100">
             </a>
-            <span class="font-sen text-[12px] text-[#D9D9D9] custom-selection select-none">
+            <span class="center-text font-sen text-[12px] text-[#D9D9D9] custom-selection select-none">
                 My Github
             </span>
         </div>
@@ -234,7 +234,7 @@
                 <img src="img-behance.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-top transition-opacity duration-500 group-hover:opacity-100">
                 
             </a>
-            <span class="font-sen text-[12px] text-[#D9D9D9] custom-selection select-none">
+            <span class="center-text font-sen text-[12px] text-[#D9D9D9] custom-selection select-none">
                 My Behance
             </span>
         </div>
@@ -264,7 +264,7 @@
                 <!-- Background image -->
                 <img src="img-hashnode.jpg" alt="" class="absolute inset-0 w-full h-full object-cover  opacity-0 object-top transition-opacity duration-500 group-hover:opacity-100">
             </a>
-            <span class="font-sen text-[12px] text-[#D9D9D9] custom-selection select-none">
+            <span class="center-text font-sen text-[12px] text-[#D9D9D9] custom-selection select-none">
                 My Blogs
             </span>
         </div>
@@ -287,7 +287,7 @@
 </section>
 
 <!-- --------------- CONTACT SECTION ---------------- -->
-<div class="h-[1px] bg-[#3872f0] mx-[15vw]"></div>
+<div class="line-hidden-phone h-[1px] bg-[#3872f0] mx-[15vw]"></div>
 <section id="contact" class="contact-section-mobile h-[100dvh]  pr-[25.104vw] w-full flex flex-row justify-between relative">
     <div class="links-mobile w-[33.125vw] flex flex-col justify-end">
         <div class="ml-[32px] mb-[3.333vw]">
@@ -296,18 +296,18 @@
             </p>
             <!-- Linked In -->
             <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff]"><a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">LinkedIn</a></p>
-            <!-- Behance -->
+            <!-- Spotify -->
             <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff]"><a href="https://open.spotify.com/user/31ksuirhm2vzvhcxc33bcr2dme5y?si=WsEd_wMdSe2M7pGhEUxZzw" alt="Spotify Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">Spotify</a></p>
             <!-- X -->
             <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff]"><a href="https://x.com/_the_crowww?t=-PVfGMsz4Gq0Sxu6Y1b1mA&s=09" alt="Twitter Handle Link" target="_blank" class="custom-selection inline-block hover:text-[#ffffff] transition-all duration-300">X</a></p>
             <!-- Pinterest -->
             <p class="font-sen font-regular leading-[100%] text-[1.5vw] text-[#c6e5ff] "><a href="https://pin.it/VaLaQDlT6" alt="Pinterest Link" target="_blank" class="custom-selection hover:text-[#ffffff] transition-all duration-300">Pinterest</a></p>
             
-            <h1 class="font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none " draggable="false">let's chat</h1>
+            <h1 class="font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none  tracking-tighter" draggable="false">let's chat</h1>
         </div>
     </div>
     
-    <h1 class="about-heading-mobile font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none mt-[2.5rem]" draggable="false">let's chat</h1>
+    <h1 class="about-heading-mobile font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none mt-[2.5rem] " draggable="false">let's chat</h1>
 
     <form class="contact-form-mobile w-[23.54vw] flex flex-col justify-center">
         <div id="inputs" class="flex flex-col gap-[1.354vw] w-full">
@@ -365,7 +365,7 @@
         <div class="flex gap-2 justify-between items-center mt-[0.5rem]">
             <a href="https://www.linkedin.com/in/surajit-sutradhar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn Link" target="_blank"><img src="icon-linkedin.svg" alt="LinkedIn Link" class="scale-1 w-[24px] select-none"/></a>
 
-            <a href="https://www.behance.net/surajitsutradh2" alt="Spotify Link" target="_blank"><img src="icon-spotify.svg" alt="Spotify Icon" class="scale-1 w-[24px] select-none"/></a>
+            <a href="https://open.spotify.com/user/31ksuirhm2vzvhcxc33bcr2dme5y?si=WsEd_wMdSe2M7pGhEUxZzw" alt="Spotify Link" target="_blank"><img src="icon-spotify.svg" alt="Spotify Icon" class="scale-1 w-[24px] select-none"/></a>
 
             <a href="https://x.com/_the_crowww?t=-PVfGMsz4Gq0Sxu6Y1b1mA&s=09" alt="Twitter Handle Link" target="_blank"><img src="icon-twitter.svg" alt="Twitter Icon" class="scale-1 w-[24px] select-none"/></a>
 
@@ -730,7 +730,7 @@ textarea:not(:placeholder-shown):invalid {
 
     /* Cards section mobile */
     .cards-section-mobile{
-        width: 25vh;
+        width: 70%;
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -748,7 +748,7 @@ textarea:not(:placeholder-shown):invalid {
         margin: auto;
         align-items: center;
         justify-content: center;
-        width: 25vh;
+        width: 80%;
         height: 25vh;
     }
 
@@ -760,18 +760,31 @@ textarea:not(:placeholder-shown):invalid {
         width: 10vh;
     }
 
+    .center-text{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Separation line */
+    .line-hidden-phone{
+        display: none;
+    }
+
     /* Works */
     #works{
-        width: 70%;
+        width: 100%;
         height: 20vh;
     }
 
     .mobile-heading {
         font-size: 16px;
+        margin: 0 3rem;
     }
 
     .project-container{
         height: 64px;
+        margin: 0 3rem;
     }
 
     .project-container > a > img {
