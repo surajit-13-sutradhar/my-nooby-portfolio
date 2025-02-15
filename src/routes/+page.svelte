@@ -425,7 +425,7 @@
 
 :global(body) {
     height: 100lvh;
-    background-image: url('/DesktopBackgroundalt.png');
+    background-image: url('/DesktopBackgroundalt.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -566,7 +566,7 @@ textarea:not(:placeholder-shown):invalid {
 
 
 
-@media (min-width: 45em){
+@media (min-width: 55em){
     .spotify-card-mobile{
         position: absolute;
     }
@@ -586,7 +586,7 @@ textarea:not(:placeholder-shown):invalid {
 }
 
 /* Navbar Responsive */
-@media (max-width: 45em){
+@media (max-width: 55em){
     /* Navbar responsiveness starts */
     .primary-navigation {
         position: fixed;
