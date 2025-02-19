@@ -135,7 +135,6 @@
 </script>
 
 {#if isLoading}
-<!-- ---------- Loading Screen -----------  -->
 <section class="loading h-[100svh] w-full fixed bg-[#0a081d] flex flex-col gap-0 items-center justify-center flex-grow" class:fly-up={counter === 100}>
     <p class="font-charm text-[#CABBFF] text-[32px] select-none rounded-full">{counter}%</p>
     <div id="progress-bar-container" class="w-[12rem] h-[2px] bg-[#ffffff]">
@@ -143,7 +142,6 @@
     </div>
 </section>
 {:else}
-<!-- ---------- DATE AND TIME ---------- -->
 <div id="date-time" class="fixed-top fixed-bottom-right m-[1.67vw] tracking-custom58 font-sen text-[16px] font-regular text-[#FFFFFF] pr-[1.67vw] custom-selection "> 
     {date.getHours()}:{pad(date.getMinutes())}:{pad(date.getSeconds())}
 </div>
@@ -195,7 +193,6 @@
 
 <!-- --------------- ABOUT SECTION ---------------- -->
 <section id="about" class="min-h-screen flex flex-col">
-    <div class="h-[1px] bg-[#3872f0] mx-[15vw]"></div>
     <div class="intro-mobile pr-[25.104vw] w-full flex flex-row justify-between relative ">
         <div class="about-mobile w-[33.125vw] flex flex-col justify-end">
             <div class="top-intro-mobile pl-[32px] pb-[3.333vw]">
@@ -210,7 +207,7 @@
                 Combining my love for design and aesthetics with my passion for code. I love listening to music, watching movies and creating art in my free time. Ocassionally I also write blogs.
             </p>
             <div class="photo-image-mobile w-[70%] h-[22.292vw] backdrop-blur-lg rounded-sm relative overflow-hidden">
-                <img src="img-self.png" alt="Profile" class="object-cover w-full h-full rounded-sm transform transition-transform duration-200 ease-in hover:duration-[800ms] hover:scale-[1.05] select-none">
+                <img src="img-self.webp" alt="Profile" class="object-cover w-full h-full rounded-sm transform transition-transform duration-200 ease-in hover:duration-[800ms] hover:scale-[1.05] select-none">
             </div>
         </div>
     </div>
@@ -282,20 +279,34 @@
     <!-- ---------- WORKS ---------- -->
     <!-- <div class="h-[1px] bg-slate-50 mx-[15vw]"></div> -->
     <div id="works" class="w-[49.844vw] h-[16.39vw] mx-auto my-[3.33vw]">
-        <h2 class="mobile-heading font-sen font-medium text-[1.667vw] text-[#FFFFFF] select-none pt-[3.33vw] px-[3.33vw] border-b-[1.5px] border-[#FFFFFF]">Stuff I made</h2>
-        <div class="project-container py-[1.667vw] px-[3.333vw] h-[6.39vw] border-b-[1.5px] border-[#FFFFFF] flex flex-row items-center justify-between">
+        <h2 class="mobile-heading font-sen font-bold text-[2.083vw] text-[#FFFFFF] select-none pt-[3.33vw] px-[3.33vw] border-b-[1.5px] border-[#FFFFFF]">Stuff I made</h2>
+        <!-- Project 1 Container -->
+        <div class="project-container py-[1.667vw] px-[3.333vw] h-[6.39vw] border-b-[1.5px] border-[#FFFFFF] flex flex-column items-center justify-between">
+            <!-- Project 1 Info -->
             <div class="project-info flex items-center gap-5">
-                <h3 class="font-sen font-bold text-[2.083vw] text-[#FFFFFF] select-none hover:translate-x-4 transition-all duration-300">This Portfolio</h3>
-                <a href="https://surajitsutradhar.vercel.app/" alt="website link"><img src="/linklogo.svg" alt="External Link Svg" class="w-[1.406vw] scale-1 cursor-pointer select-none" /> </a>
-                
+                <h3 class="font-sen text-[1.667vw] text-[#FFFFFF] select-none hover:text-[#d6ccff] transition-all duration-300">This Portfolio</h3>
+                <a href="https://surajitsutradhar.vercel.app/" alt="website link"><img src="/linklogo.svg" alt="External Link Svg" class="w-[1vw] scale-1 cursor-pointer select-none" /> </a>
             </div>
             <a href="https://github.com/surajit-13-sutradhar/my-nooby-portfolio" target="_blank"><img src="/github.svg" alt="Github link" class="w-[3.5vw] scale-1 cursor-pointer select-none"></a>
+            <!-- Upto here -->
         </div>
+
+        <!-- Project 1 Container -->
+        <div class="project-container py-[1.667vw] px-[3.333vw] h-[6.39vw] border-b-[1.5px] border-[#FFFFFF] flex flex-column items-center justify-between">
+            <!-- Project 1 Info -->
+            <div class="project-info flex items-center gap-5">
+                <h3 class="font-sen text-[1.667vw] text-[#FFFFFF] select-none hover:text-[#d6ccff] transition-all duration-300">Admin Dashboard</h3>
+                <a href="https://my-nooby-admin-dashboard-4we2.vercel.app/" alt="website link" target="_blank"><img src="/linklogo.svg" alt="External Link Svg" class="w-[1vw] scale-1 cursor-pointer select-none" /> </a>
+            </div>
+            <a href="https://github.com/surajit-13-sutradhar/my-nooby-admin-dashboard" target="_blank"><img src="/github.svg" alt="Github link" class="w-[3.5vw] scale-1 cursor-pointer select-none"></a>
+            <!-- Upto here -->
+        </div>
+
+
     </div>
 </section>
 
 <!-- --------------- CONTACT SECTION ---------------- -->
-<div class="line-hidden-phone h-[1px] bg-[#3872f0] mx-[15vw]"></div>
 <section id="contact" class="contact-section-mobile h-[100dvh]  pr-[25.104vw] w-full flex flex-row justify-between relative">
     <div class="links-mobile w-[33.125vw] flex flex-col justify-end">
         <div class="ml-[32px] mb-[3.333vw]">
@@ -317,6 +328,7 @@
     
     <h1 class="about-heading-mobile font-sen font-bold leading-[100%] text-white text-[9.375vw] pt-[3.333vw] select-none mt-[2.5rem] " draggable="false">let's chat</h1>
 
+    <!-- Contact Form -->
     <form class="contact-form-mobile w-[23.54vw] flex flex-col justify-center">
         <div id="inputs" class="flex flex-col gap-[1.354vw] w-full">
             <div id="name">
@@ -791,11 +803,6 @@ textarea:not(:placeholder-shown):invalid {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-    }
-
-    /* Separation line */
-    .line-hidden-phone{
-        display: none;
     }
 
     /* Works */
